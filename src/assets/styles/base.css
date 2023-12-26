@@ -1,0 +1,193 @@
+@import url("./tailwind.css");
+@import url("./font.css");
+
+input,
+textarea,
+button,
+select,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  font-family: theme("fontFamily.mainLight");
+  background: theme("colors.white");
+}
+@media screen and (min-width: theme("screens.lg")) {
+  body {
+    background: theme("colors.grayLight");
+  }
+}
+
+.container-main {
+  max-width: 1000px;
+}
+@media screen and (min-width: theme("screens.lg")) {
+  .container-main {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+}
+
+/* width */
+.no-scrollbar::-webkit-scrollbar {
+  width: 5px;
+}
+/* Track */
+.no-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+/* Handle */
+.no-scrollbar::-webkit-scrollbar-thumb {
+  background: transparent;
+  border-radius: 10px;
+}
+/* Handle on hover */
+.no-scrollbar:hover::-webkit-scrollbar-thumb {
+  background: theme("colors.grayDark");
+}
+
+@media screen and (max-width: theme("screens.md")) {
+  /* width */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.text-stroke-black {
+  color: theme("colors.white"); /* Set the color of the stroke */
+  text-shadow: -1px -1px 0 theme("colors.black"),
+    2px -1px 0 theme("colors.black"), -1px 1px 0 theme("colors.black"),
+    1px 1px 0 theme("colors.black");
+}
+
+.clipboard.copied .copy-icon {
+  display: none;
+}
+.clipboard.copied .check-icon {
+  display: flex;
+  color: theme("colors.success") !important;
+  animation: copy 0.3s forwards;
+}
+
+.clipboard .copy-icon {
+  display: flex;
+}
+.clipboard .check-icon {
+  display: none;
+}
+
+.btn-copy.clipboard .btn-notCopy {
+  display: flex;
+}
+.btn-copy.clipboard .copied-btn {
+  display: none;
+}
+.btn-copy.clipboard.copied .btn-notCopy {
+  display: none;
+}
+.btn-copy.clipboard.copied .copied-btn {
+  display: flex;
+}
+
+@keyframes copy {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.3);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.shaking {
+  animation: shake 0.5s forwards;
+}
+@keyframes shake {
+  0% {
+    transform: translateX(1px);
+  }
+  10% {
+    transform: translateX(-1px);
+  }
+  20% {
+    transform: translateX(-1px);
+  }
+  30% {
+    transform: translateX(1px);
+  }
+  40% {
+    transform: translateX(2px);
+  }
+  50% {
+    transform: translateX(-2px);
+  }
+  60% {
+    transform: translateX(2px);
+  }
+  70% {
+    transform: translateX(1px);
+  }
+  80% {
+    transform: translateX(-1px);
+  }
+  90% {
+    transform: translateX(1px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+.dark .toggle-image {
+  filter: invert(1);
+}
+
+.projects-card.active {
+  animation: scale 0.5s forwards;
+}
+.scale-animation {
+  animation: scale 0.5s forwards;
+}
+@keyframes scale {
+  0% {
+    transform: scale(0.9) translateY(20px);
+    opacity: 0.4;
+  }
+  100% {
+    transform: scale(1) translateY(0px);
+    opacity: 1;
+  }
+}
+.select-menu {
+  position: fixed !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 4px !important;
+  bottom: 50px !important;
+  width: 230px !important;
+  height: fit-content !important;
+  right: 17px !important;
+  top: inherit !important;
+  border: 2px solid theme('colors.grayLight2');
+  outline: none !important;
+  box-shadow: none !important;
+  padding: 6px !important;
+  background: theme("colors.white") !important;
+  border-radius: 4px !important;
+  z-index: 9999 !important;
+}
+
+@media screen and (min-width: theme("screens.md")) {
+  .select-menu {
+    position: absolute !important;
+    bottom: 100% !important;
+    width: 230px !important;
+    right: -7px !important;
+  }
+}
+
+

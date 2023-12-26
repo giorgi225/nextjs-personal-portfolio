@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+      --white: #ffffff;
+      --black: #1f1f1f;
+      --black2: #424242;
+      --black-80: 31, 31, 31, 0.8;
+      --grayLight: #f6f4f4;
+      --grayLight2: #eeeeee;
+      --grayDark: #d4d4d4;
+      --grayDark2: #9f9f9f;
+      --grayDark-30: 212, 212, 212, 0.3;
+      --success: #60c983;
+      --orange: #ffbb63;
+    }
+    .dark {
+      --white: #141718;
+      --black: #dfdbdb;
+      --black2: #b7b7b7;
+      --grayLight: #232627;
+      --black-80: 207, 207, 207, 0.8;
+      --grayLight2: #2f2f2f;
+      --grayDark: #474f51;
+      --grayDark-30: 0, 0, 0, 0.3;
+    }
+  }

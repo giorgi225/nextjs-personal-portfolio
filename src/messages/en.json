@@ -1,0 +1,101 @@
+{
+  
+  "english": "English",
+  "georgian": "Georgian",
+
+  "pages": "Pages",
+  "home": "Home",
+  "about": "About",
+  "projects": "Projects",
+  "services": "Services",
+  "resume": "Resume",
+  "skills": "Skills",
+
+  "get_in_touch": "Get in touch",
+  "contact_form": "Contact Form",
+
+  "social_platforms": "Social Platforms",
+
+  "settings": "Settings",
+  "dark_mode": "Dark Mode",
+  "language": "Language",
+
+  "copyright": "© Gigi Shalamberidze 2023. All rights reserved.",
+
+  "web_designer": "Web Designer",
+  "developer": "Developer",
+
+  "welcome_text": "I am Gigi Shalamberidze, Web Developer & Web Designer with 2 years experience from Tbilisi, Georgia.",
+
+  "freelancer": "Freelancer",
+  "with": "With",
+  "years_experience": "Years Experience",
+  "hire_me": "Hire Me",
+
+  "about_introduction": "Welcome to my corner of the digital realm! I'm Gigi Shalamberidze, a passionate web developer and creative web designer with 2 years experience. With a keen eye for aesthetics and a love for coding, I bring imagination to life through captivating websites. ",
+  "digital_journey": "The beginning of the digital journey",
+  "digital_journey_text": "My journey in the digital world started with a spark of curiosity. Armed with determination and a desire to learn, I set out on the path of programming. It all began 2 years ago with online tutorials and courses that introduced me to the fundamentals of HTML, CSS, and JavaScript. The online community became my classroom, providing the resources and support I needed to take my first steps into the world of coding.",
+
+  "learning_landscape": "The Learning Landscape",
+  "learning_landscape_text": "My learning adventure was a mix of self-discovery and online guidance. Platforms like Codecademy, freeCodeCamp, and YouTube tutorials served as my mentors. The satisfaction of translating lines of code into functional web pages kept me engaged. As my skills grew, I explored more advanced concepts, embracing the power of libraries and frameworks like Vue.js and React.js. This hands-on approach not only solidified my understanding but also fueled my passion for crafting digital experiences",
+
+  "journey_continues": "The Journey Continues",
+  "journey_continues_text": "My journey into the digital world was not limited to programming, I was also intrigued by the intricacies of UI/UX design and decided to spend some time studying it. I started using Figma to bring my creative visions to life, building web pages of different types and complexity to sharpen my skills. All this made me a successful web designer and web developer.",
+
+  "services_introduction": "welcome to my Services page! I'm thrilled to be able to provide you with a variety of professional services to boost your online presence and propel your digital success. Investigate the services I offer",
+  "resume_introduction": "Welcome to my resume! Here, you'll find a detailed overview of my skills, experiences, and education that showcase my qualifications and journey.",
+
+  "contact": "Contact",
+
+  "compose": "Compose",
+  "copy": "Copy",
+  "copied": "Copied",
+  "call": "Call",
+  "phone": "Phone",
+  "email": "Email",
+  "name": "Name",
+  "what_should_i_call_you": "What should i call you?",
+  "email_or_phone": "Email or Phone",
+  "how_can_i_reach_you": "How can i reach you?",
+  "choose_service": "Choose Service",
+  "other": "Other",
+  "subject": "Subject",
+  "please_specify_the_topic_briefly": "Please specify the topic briefly",
+  "message": "Message",
+  "please_provide_more_details": "Please provide more details",
+  "send": "Send",
+
+  "all": "All",
+  "coding": "Coding",
+  "design": "Design",
+
+  "open_project": "Open Project",
+
+  "goodfriend_(online_cazino)": "GoodFriend (Online Cazino)",
+  "social_platform": "Social Platform",
+  "aped_(trading_platform)": "APED (Trading Platform)",
+  "flickers_(e_commerse)": "Flickers (E-commerse)",
+  "cinemania_(online_movies)": "Cinemania (Online Movies)",
+
+  "development": "Development",
+  "development_description": "Functionality meets creativity. I'm all about turning designs into fully operational websites or web applications. From online stores to interactive web solutions, I'm here to make sure your ideas work perfectly on the web.",
+  "design_description": "Got a vision? Let's turn it into an eye-catching website! I specialize in creating designs that are not just visually appealing but also super user-friendly. Whether it's a brand-new project or giving your existing site a fresh look, I've got you covered.",
+  "seo_(search_engine_optimization)": "SEO (Search Engine Optimization)",
+  "seo_description": "What good is a website if no one sees it, right? My SEO services are all about getting your site the attention it deserves. Through smart keyword strategies, content tweaks, and technical optimizations, I'll help improve your site's chances of showing up higher in search engine results.",
+
+  "present": "Present",
+  "education": "Education",
+  "international_black_sea_university": "International Black Sea University",
+  "computer_science": "Computer Science",
+  "international_black_sea_university_description": "I'm a motivated and committed computer science student who is now attending IBSU (International Black Sea University) in Georgia to further my education. I'm pleased to be a part of the dynamic and forward-thinking area of computer science, where I get to investigate the most recent innovations and developments influencing our environment. IBSU students enjoy the benefit of learning from knowledgeable instructors and interacting with a wide range of like-minded peers who are passionate about computer science. I'm developing a solid foundation in programming languages, algorithms, data structures, and software development processes through my courses.",
+  "gimnazia_oqrosakvani": "Gimnazia Oqrosakvani",
+  "primary_&_secondary_education": "Primary & Secondary Education",
+  "gimnazia_oqrosakvani_description": "My basic and secondary education was finished at Gimnazium, a prestigious Georgian institution. Academic success was prioritized at the school, creating a motivating and encouraging environment for pupils.",
+
+  "experience": "Experience",
+  "web_developer_&_web_designer": "Web Developer & Web Designer",
+  "freelancer_description": "I've started an amazing adventure as a committed Freelancer on Freelancer.com, building excellent full-stack websites and providing cutting-edge, aesthetically pleasing, and user-friendly web designs. I approach every job I take on with a special combination of creativity and technical knowledge. I have a sharp eye for detail and a desire for excellence.",
+  "viptrade": "VIPTRADE",
+  "frontend_developer": "Frontend Developer",
+  "viptrade_description": "I played an important part as a cooperative team member working closely with a great group of designers throughout my tenure at VIPTRADE, a well-known Georgian corporation. My main duty was to design outstanding, logical, and aesthetically pleasing websites and online apps. I painstakingly created pixel-perfect interfaces that expertly combined aesthetics and functionality using my knowledge of HTML, CSS, JavaScript, ReactJs."
+}
