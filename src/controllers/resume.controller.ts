@@ -43,46 +43,55 @@ export const skillsArr: any = [
   {
     title: "Html",
     icon: "icon-park-solid:html-five",
-    experienceYear: "2",
+    startYear: "2022",
+    startMonth: "0" // jan
   },
   {
     title: "Css",
     icon: "uiw:css3",
-    experienceYear: "2",
+    startYear: "2022",
+    startMonth: "0"
   },
   {
     title: "Tailwind Css",
     icon: "simple-icons:tailwindcss",
-    experienceYear: "1",
+    startYear: "2022",
+    startMonth: "6"
   },
   {
     title: "JavaScript",
     icon: "fluent:javascript-20-filled",
-    experienceYear: "2",
+    startYear: "2022",
+    startMonth: "6"
   },
   {
     title: "Typescript",
     icon: "akar-icons:typescript-fill",
-    experienceYear: "1.5",
+    startYear: "2023",
+    startMonth: "2"
   },
   {
     title: "ReactJs + NextJs",
     icon: "mdi:react",
-    experienceYear: "1",
+    startYear: "2023",
+    startMonth: "6"
   },
   {
     title: "VueJs",
     icon: "ri:vuejs-fill",
-    experienceYear: "2",
+    startYear: "2023",
+    startMonth: "0"
   },
   {
     title: "NodeJs + Express",
     icon: "teenyicons:nodejs-solid",
-    experienceYear: "1",
+    startYear: "2023",
+    startMonth: "6"
   },
   {
     title: "Figma",
     icon: "solar:figma-bold",
-    experienceYear: "2",
+    startYear: "2022",
+    startMonth: "5"
   },
 ];

@@ -1,3 +1,4 @@
+"use client"
 // Next
 import { useMessages } from "next-intl";
 // Typese
@@ -8,9 +9,27 @@ import PageLayout from "@/components/layout/pageLayout";
 import { resumeArr, skillsArr } from "@/controllers/resume.controller";
 import IconBase from "@/components/icon/IconBase";
 import ContactInformation from "@/components/contact/ContactInformation";
+import { useEffect, useState } from "react";
 
 const Resume = () => {
+  const [dynamicSkillsArr, setDynamicSkillsArr] = useState([]);
   const messages: any = useMessages();
+
+  useEffect(() => {
+    const calculateExperience = (startYear: number, startMonth: number) => {
+      const startDate = new Date(startYear, startMonth - 1);
+      const currentDate = new Date();
+      const diffInMonths = (currentDate.getMonth() - startDate.getMonth()) + 12 * (currentDate.getFullYear() - startDate.getFullYear());
+
+      return (diffInMonths / 12).toFixed(1);
+    };
+
+    const updatedSkillsArr = skillsArr.map((item: any) => ({
+      ...item,
+      experienceYear: calculateExperience(item.startYear, item.startMonth),
+    }));
+    setDynamicSkillsArr(updatedSkillsArr);
+  }, [skillsArr]);
   return (
     <PageLayout pageTitle="resume" pageIntroduction="resume_introduction">
       <div className="w-full flex flex-col gap-6">
@@ -51,13 +70,16 @@ const Resume = () => {
           {messages["skills"]}
         </h5>
         <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-          {skillsArr.map((item: any, index: number) => (
+          {dynamicSkillsArr.map((item: any, index: number) => (
             <div className="p-4 flex flex-col items-center gap-1 bg-grayLight shadow-sm border-dashed  rounded-[4px]">
               <IconBase
                 icon={item.icon}
                 className="text-black text-3xl rounded-[4px] p-2 border border-grayLight"
               />
-              <p className="text-black text-sm text-center font-mainMedium">{item.title}</p>
+              <p className="text-black text-sm text-center font-mainMedium">
+                {item.title}
+              </p>
+              <p className="text-sm font-mainMedium italic">{item.experienceYear} year</p>
             </div>
           ))}
         </div>

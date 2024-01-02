@@ -92,7 +92,10 @@ const NavList = ({
                       />
                       {item.text.replace(/\s+/g, "") ===
                       process.env.NEXT_PUBLIC_PHONE ? (
-                        <a className="hover:text-blue-500 group underline" href={`tel:${process.env.NEXT_PUBLIC_PHONE}`}>
+                        <a
+                          className="hover:text-blue-500 group underline"
+                          href={`tel:${process.env.NEXT_PUBLIC_PHONE}`}
+                        >
                           <p className="font-mainMedium text-xs group-hover:text-blue-500 text-black lowercase">
                             {item.text.length > 18
                               ? item.text.slice(0, 18) + "..."
@@ -101,7 +104,10 @@ const NavList = ({
                         </a>
                       ) : item.text.replace(/\s+/g, "") ===
                         process.env.NEXT_PUBLIC_EMAIL ? (
-                        <a className="hover:text-blue-500 group underline" href={`mailto:${process.env.NEXT_PUBLIC_EMAIL}`}>
+                        <a
+                          className="hover:text-blue-500 group underline"
+                          href={`mailto:${process.env.NEXT_PUBLIC_EMAIL}`}
+                        >
                           <p className="font-mainMedium text-xs group-hover:text-blue-500 text-black lowercase">
                             {item.text.length > 18
                               ? item.text.slice(0, 18) + "..."
