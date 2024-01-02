@@ -40,6 +40,23 @@ export const projectsArr: ProjectsArr[] = [
     link: "https://www.figma.com/proto/tVVpeVqlRkDc7507zpttsu/Social-Platform?page-id=0%3A1&type=design&node-id=86-6&viewport=447%2C272%2C0.1&t=cJagNm7Uk3OcvGir-1&scaling=min-zoom&mode=design",
   },
   {
+    title: "serwish_(services_website)",
+    category: [
+      {
+        text: "design",
+        icon: "fluent:design-ideas-16-regular",
+      },
+    ],
+    skills: [
+      {
+        programingLanguage: "Figma",
+        programingLanguageIcon: "solar:figma-outline",
+      },
+    ],
+    image: "/images/projects/serwish.svg",
+    link: "https://serwish.ge/",
+  },
+  {
     title: "aped_(trading_platform)",
     category: [
       {
@@ -58,7 +75,7 @@ export const projectsArr: ProjectsArr[] = [
       },
     ],
     image: "/images/projects/aped.svg",
-    link: "https://apedtrade.vercel.app/",
+    link: "https://aped.xyz/",
   },
   {
     title: "flickers_(e_commerse)",
