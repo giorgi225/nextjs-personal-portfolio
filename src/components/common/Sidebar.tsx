@@ -105,13 +105,14 @@ const Sidebar = ({ isActive, closeSidebar }: SidebarProps) => {
                     {messages["dark_mode"]}
                   </p>
                 </div>
-                <label className="relative flex items-center ml-4 md:ml-0 p-0.5 w-[39px] h-[20px] rounded-full bg-grayLight2 cursor-pointer group-hover:bg-white transition-all">
+                <label htmlFor="themeCheckbox" className="relative flex items-center ml-4 md:ml-0 p-0.5 w-[39px] h-[20px] rounded-full bg-grayLight2 cursor-pointer group-hover:bg-white transition-all">
                   <input
                     type="checkbox"
                     onChange={handleThemeMode}
                     value="themeMode"
                     checked={isDarkMode}
                     className="peer sr-only"
+                    id="themeCheckbox"
                   />
                   <div className="w-[15px] h-[15px] rounded-full bg-grayDark peer-checked:translate-x-[20px] transition-all"></div>
                 </label>
