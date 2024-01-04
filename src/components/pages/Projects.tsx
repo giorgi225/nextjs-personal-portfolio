@@ -12,10 +12,9 @@ import { ProjectsArr } from "@/types/pages/project.types";
 import PageLayout from "@/components/layout/pageLayout";
 
 // Controllers
-import { projectsArr } from "@/controllers/projects.controller";
 const ProjectCard = dynamic(() => import("@components/card/projectCard"));
 
-const Projects = () => {
+const Projects = ({ projectsArr }: { projectsArr: ProjectsArr[] }) => {
   const messages: any = useMessages();
   const projectsFilter: FilterBtnsArr[] = [
     {
