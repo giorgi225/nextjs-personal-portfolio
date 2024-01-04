@@ -1,6 +1,6 @@
 "use client";
 import { ProjectsArr } from "@/types/pages/project.types";
-import React, { useState } from "react";
+import { useState } from "react";
 import IconBase from "../icon/IconBase";
 import Image from "next/image";
 import { useMessages } from "next-intl";
@@ -35,6 +35,7 @@ const projectCard = ({ item, index }: { item: any; index: number }) => {
             </p>
           </a>
         </div>
+
         <Image
           onLoad={handleLoad}
           width={500}

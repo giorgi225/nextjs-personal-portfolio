@@ -2,6 +2,7 @@
 // Next
 import { useState } from "react";
 import { useMessages } from "next-intl";
+import dynamic from "next/dynamic";
 
 // Types
 import { FilterBtnsArr } from "@/types/components/filterBtns.types";
@@ -9,12 +10,10 @@ import { ProjectsArr } from "@/types/pages/project.types";
 
 // Components
 import PageLayout from "@/components/layout/pageLayout";
-import IconBase from "@/components/icon/IconBase";
 
 // Controllers
 import { projectsArr } from "@/controllers/projects.controller";
-import Image from "next/image";
-import ProjectCard from "@components/card/projectCard";
+const ProjectCard = dynamic(() => import("@components/card/projectCard"));
 
 const Projects = () => {
   const messages: any = useMessages();
