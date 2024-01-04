@@ -3,7 +3,7 @@
 import Projects from "@/components/pages/Projects";
 
 async function getProjectsData() {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_APU_URL}/en/api/projects`, {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/en/api/projects`, {
     method: "GET",
   });
   if (!res.ok) {
