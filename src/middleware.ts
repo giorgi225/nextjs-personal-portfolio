@@ -2,14 +2,24 @@
 
 import createMiddleware from "next-intl/middleware";
 import { locales, localePrefix } from "./navigation";
+import { NextRequest, NextResponse } from "next/server";
 
-const customIntlMiddleware = createMiddleware({
+const IntlMiddleware = createMiddleware({
   localePrefix,
   locales,
   defaultLocale: "en",
 });
 
-export default customIntlMiddleware;
+export default function middleware(req: NextRequest) {
+  // Set X-Pathname header with the requested pathname
+  const origin = req.nextUrl.origin
+  const pathName = req.nextUrl.pathname;
+  const nextApiUrl = origin + "/" + pathName.split("/")[1] + "/api"
+  req.headers.set("x-nextApiUrl", nextApiUrl);
+
+  // Apply internationalization middleware
+  return IntlMiddleware(req);
+}
 
 export const config = {
   // Match only internationalized pathnames

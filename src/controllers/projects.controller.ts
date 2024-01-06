@@ -20,7 +20,7 @@ export const projectsArr: ProjectsArr[] = [
         programingLanguageIcon: "mdi:tailwind",
       },
     ],
-    image: "https://i.ibb.co/c256nXg/goodfriend.png",
+    image: "https://upcdn.io/FW25bqg/raw/goodfriend.svg",
     link: "https://demo.goodfriendsgaming.com/",
   },
   {
@@ -37,7 +37,7 @@ export const projectsArr: ProjectsArr[] = [
         programingLanguageIcon: "solar:figma-outline",
       },
     ],
-    image: "https://i.ibb.co/YPF34SD/socialplatform.png",
+    image: "https://upcdn.io/FW25bqg/raw/socialplatform.svg",
     link: "https://www.figma.com/proto/tVVpeVqlRkDc7507zpttsu/Social-Platform?page-id=0%3A1&type=design&node-id=86-6&viewport=447%2C272%2C0.1&t=cJagNm7Uk3OcvGir-1&scaling=min-zoom&mode=design",
   },
   {
@@ -54,7 +54,7 @@ export const projectsArr: ProjectsArr[] = [
         programingLanguageIcon: "solar:figma-outline",
       },
     ],
-    image: "https://i.ibb.co/0CgTvvV/serwish.png",
+    image: "https://upcdn.io/FW25bqg/raw/serwish.svg",
     link: "https://serwish.ge/",
   },
   {
@@ -75,7 +75,7 @@ export const projectsArr: ProjectsArr[] = [
         programingLanguageIcon: "mdi:tailwind",
       },
     ],
-    image: "https://i.ibb.co/YXKVdjQ/aped.png",
+    image: "https://upcdn.io/FW25bqg/raw/aped.svg",
     link: "https://aped.xyz/",
   },
   {
@@ -92,7 +92,7 @@ export const projectsArr: ProjectsArr[] = [
         programingLanguageIcon: "solar:figma-outline",
       },
     ],
-    image: "https://i.ibb.co/fF6vTg6/flickers.png",
+    image: "https://upcdn.io/FW25bqg/raw/flickers.svg",
     link: "https://www.figma.com/proto/id3IOeaBxJUYKfmbb3NHO0/Untitled?page-id=10%3A7023&node-id=11-7207&mode=design&t=Akdp1Jcu4WyJl7Zb-1",
   },
   {
@@ -125,7 +125,7 @@ export const projectsArr: ProjectsArr[] = [
         programingLanguageIcon: "fluent:javascript-20-regular",
       },
     ],
-    image: "https://i.ibb.co/q1yj6wQ/cinemania.png",
+    image: "https://upcdn.io/FW25bqg/raw/cinemania.svg",
     link: "https://cinemania22.netlify.app/",
   },
 ];
