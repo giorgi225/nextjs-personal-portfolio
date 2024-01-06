@@ -10,13 +10,7 @@ const IntlMiddleware = createMiddleware({
   defaultLocale: "en",
 });
 
-export default function middleware(req: NextRequest) {
-  // Set X-Pathname header with the requested pathname
-  const origin = req.nextUrl.origin
-  const pathName = req.nextUrl.pathname;
-  const nextApiUrl = origin + "/" + pathName.split("/")[1] + "/api"
-  req.headers.set("x-nextApiUrl", nextApiUrl);
-
+export default function middleware(req: NextRequest) {  
   // Apply internationalization middleware
   return IntlMiddleware(req);
 }
