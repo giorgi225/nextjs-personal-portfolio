@@ -11,7 +11,6 @@ import Layout from "@/components/layout/layout";
 
 // Styles
 import "@styles/base.css";
-import Link from "next/link";
 
 // SEO
 export const metadata: Metadata = {
@@ -26,6 +25,7 @@ export default function RootLayout({
   children: React.ReactNode;
   params: { locale: string };
 }) {
+  
   const messages = useMessages();
   return (
     <html lang={locale}>
