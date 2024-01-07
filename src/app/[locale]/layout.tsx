@@ -1,10 +1,6 @@
 // Next
 import type { Metadata } from "next";
-import {
-  NextIntlClientProvider,
-  useMessages,
-  useTranslations,
-} from "next-intl";
+import { NextIntlClientProvider, useMessages } from "next-intl";
 
 // Components
 import Layout from "@/components/layout/layout";
@@ -25,13 +21,16 @@ export default function RootLayout({
   children: React.ReactNode;
   params: { locale: string };
 }) {
-  
   const messages = useMessages();
   return (
     <html lang={locale}>
       <body>
         <NextIntlClientProvider messages={messages} locale={locale}>
-          <Layout>{children}</Layout>
+          <div className="relative w-full md:h-screen lg:p-3">
+            <div className="relative w-full h-full flex flex-col-reverse md:flex-col lg:flex-row gap-3 pb-24 md:pb-0">
+              <Layout>{children}</Layout>
+            </div>
+          </div>
         </NextIntlClientProvider>
       </body>
     </html>

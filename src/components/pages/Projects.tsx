@@ -1,7 +1,7 @@
 "use client";
 // Next
 import { useEffect, useState } from "react";
-import { useLocale, useMessages } from "next-intl";
+import { useMessages } from "next-intl";
 
 // Types
 import { FilterBtnsArr } from "@/types/components/filterBtns.types";
@@ -11,12 +11,12 @@ import { ProjectsArr } from "@/types/pages/project.types";
 import PageLayout from "@/components/layout/pageLayout";
 
 // Controllers
-import ProjectCard from "@components/card/projectCard";
-import { usePathname } from "next/navigation";
-
+// import ProjectCard from "@components/card/projectCard";
+import dynamic from "next/dynamic";
+import Loader from "../loader";
+const ProjectCard = dynamic(() => import("@components/card/projectCard"));
 const Projects = () => {
   const messages: any = useMessages();
-  const pathname = usePathname()
   const [projectsArr, setProjectsArr] = useState<ProjectsArr[] | undefined>();
   const projectsFilter: FilterBtnsArr[] = [
     {
@@ -42,20 +42,6 @@ const Projects = () => {
     FilterBtnsArr["val"]
   >(projectsFilter[0].val || "all");
 
-  useEffect(() => {
-    const nextApiUrl = window.location.origin + "/" + pathname.split("/")[1]
-    const fetchProductsData = async () => {
-      const res = await fetch(`${nextApiUrl}/api/projects`, {
-        method: "GET",
-      });
-      if (!res.ok) {
-        throw new Error("Failed to fetch data");
-      }
-      const data = await res.json();
-      setProjectsArr(data.data);
-    };
-    fetchProductsData();
-  }, []);
   const projectsDynamicArr: ProjectsArr[] | undefined = projectsArr
     ? projectsArr.filter((item: ProjectsArr) => {
         for (let i = 0; i < item.category.length; i++) {
@@ -77,9 +63,13 @@ const Projects = () => {
       pageTitle="projects"
     >
       <div className="w-full flex flex-col gap-10">
-        {projectsDynamicArr?.map((item: ProjectsArr, index: number) => (
-          <ProjectCard item={item} index={index} key={index} />
-        ))}
+        {projectsDynamicArr && projectsDynamicArr.length > 0 ? (
+          projectsDynamicArr.map((item: ProjectsArr, index: number) => (
+            <ProjectCard item={item} index={index} key={index} />
+          ))
+        ) : (
+          <Loader />
+        )}
       </div>
     </PageLayout>
   );

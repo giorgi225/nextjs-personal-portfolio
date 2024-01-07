@@ -19,7 +19,5 @@ export type NavListProps = {
   customProp?: boolean;
   closeSidebar?: () => void;
   openContactModal?: () => void;
-  copyEmail?: () => void;
-  copyPhone?: () => void;
-  copyFun?: (functionName: string, targetDiv: HTMLDivElement) => void; // view this function in utils
+  copyFun?: boolean;
 };

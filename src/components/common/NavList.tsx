@@ -8,6 +8,7 @@ import type { Menu, NavListProps } from "@/types/components/navlist.types";
 
 // Components
 import IconBase from "@components/icon/IconBase";
+import useClipboard from "@/utils/copy.utils";
 
 // !bg-white shadow-sm
 const NavList = ({
@@ -28,7 +29,6 @@ const NavList = ({
   };
   // Functions
   const openModal = () => {};
-  const closeSidebara = () => {};
   const handleCopy = (
     functionName: string,
     event: React.MouseEvent<HTMLDivElement>
@@ -36,7 +36,7 @@ const NavList = ({
     let target: any = event?.target;
     let targetDiv = target.closest(".clipboard");
     if (copyFun) {
-      copyFun(functionName, targetDiv);
+      useClipboard(functionName, targetDiv);
     }
   };
 
