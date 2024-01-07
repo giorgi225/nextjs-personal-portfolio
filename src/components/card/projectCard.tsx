@@ -46,6 +46,7 @@ const ProjectCard = React.memo(
             className={`w-full rounded-[11px] group-hover:scale-[1.1] group-hover:blur-sm transition-all duration-500`}
             src={item.image}
             alt={item.title}
+            loading="lazy"
           />
         </div>
         <div className="w-full flex flex-col gap-3 pt-2 pb-4 border-b-2 border-dashed border-grayLight2">

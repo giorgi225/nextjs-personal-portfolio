@@ -9,8 +9,9 @@ import { ProjectsArr } from "@/types/pages/project.types";
 
 // Components
 import PageLayout from "@components/layout/pageLayout";
-import ProjectCard from "@components/card/projectCard";
-
+// import ProjectCard from "@components/card/projectCard";
+import dynamic from "next/dynamic";
+const ProjectCard = dynamic(()=> import("@components/card/projectCard"))
 // Controllers
 // import ProjectCard from "@components/card/projectCard";
 const Projects = ({ projectsArr }: {projectsArr: ProjectsArr[] | undefined}) => {
