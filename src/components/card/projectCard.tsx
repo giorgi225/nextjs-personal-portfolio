@@ -21,9 +21,7 @@ const ProjectCard = ({ item, index }: { item: any; index: number }) => {
       >
         {/* {loading && <Loader />} */}
 
-        <div
-          className="group-hover:opacity-100 opacity-0 rounded-[11px] absolute left-0 top-0 flex justify-center items-center p-6 w-full h-full bg-overlay-50 transition-all z-[9]"
-        >
+        <div className="group-hover:opacity-100 opacity-0 rounded-[11px] absolute left-0 top-0 flex justify-center items-center p-6 w-full h-full bg-overlay-50 transition-all z-[9]">
           <a
             href={item.link}
             target="_blank"
@@ -36,12 +34,13 @@ const ProjectCard = ({ item, index }: { item: any; index: number }) => {
           </a>
         </div>
 
-        <img
-          width={200}
-          height={200}
+        <Image
           className={`w-full rounded-[11px] group-hover:scale-[1.1] group-hover:blur-sm transition-all duration-500`}
           src={item.image}
           alt={item.title}
+          quality={100}
+          width={500}
+          height={500}
           loading="lazy"
         />
       </div>
