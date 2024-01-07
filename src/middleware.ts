@@ -10,11 +10,13 @@ const IntlMiddleware = createMiddleware({
   defaultLocale: "en",
 });
 
-export default function middleware(req: NextRequest) {  
-  const origin = req.nextUrl.origin
-  const pathName = req.nextUrl.pathname;
-  const nextApiUrl = origin + "/" + pathName.split("/")[1] + "/api"
-  req.headers.set("x-nextApiUrl", nextApiUrl);
+export default function middleware(req: NextRequest) {
+  if (req.nextUrl.pathname.includes("/projects")) {
+    const origin = req.nextUrl.origin;
+    const pathName = req.nextUrl.pathname;
+    const nextApiUrl = origin + "/" + pathName.split("/")[1] + "/api";
+    req.headers.set("x-nextApiUrl", nextApiUrl);
+  }
   // Apply internationalization middleware
   return IntlMiddleware(req);
 }
