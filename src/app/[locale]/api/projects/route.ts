@@ -1,8 +1,9 @@
 import { NextResponse } from "next/server";
-import { projectsArr } from "@/controllers/projects.controller";
+import projectsData from "@/projectsData.json"
 
 export async function GET() {
+  const data = projectsData;
   return NextResponse.json({
-    data: projectsArr,
+    data,
   });
 }
