@@ -13,7 +13,7 @@ import ProjectCard from "@components/card/projectCard";
 
 // Controllers
 // import ProjectCard from "@components/card/projectCard";
-const Projects = (projectsArr: ProjectsArr[]) => {
+const Projects = ({ projectsArr }: {projectsArr: ProjectsArr[] | undefined}) => {
   const messages: any = useMessages();
   const projectsFilter: FilterBtnsArr[] = [
     {
