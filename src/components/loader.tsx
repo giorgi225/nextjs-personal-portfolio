@@ -1,6 +1,10 @@
-const Loader = () => {
+const Loader = ({ className }: { className?: string }) => {
   return (
-    <div className="w-full h-[250px] md:h-[350px] flex items-center justify-center bg-grayLight2 rounded-[11px] overflow-hidden">
+    <div
+      className={`${
+        className ? className : ""
+      } w-full h-[250px] md:h-[350px] flex items-center justify-center bg-grayLight2 rounded-[11px] overflow-hidden`}
+    >
       <div role="status">
         <svg
           aria-hidden="true"
