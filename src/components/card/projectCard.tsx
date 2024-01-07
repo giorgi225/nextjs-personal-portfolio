@@ -33,6 +33,7 @@ const ProjectCard = ({ item, index }: { item: any; index: number }) => {
           alt={item.title}
           quality={100}
           width={800}
+          layout="responsive"
           style={{ width: "auto" }}
           height={400}
           loading={"eager"}
