@@ -1,6 +1,6 @@
 "use client";
 // Next
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useMessages } from "next-intl";
 
 // Types
@@ -8,13 +8,11 @@ import { FilterBtnsArr } from "@/types/components/filterBtns.types";
 import { ProjectsArr } from "@/types/pages/project.types";
 
 // Components
-import PageLayout from "@/components/layout/pageLayout";
+import PageLayout from "@components/layout/pageLayout";
+import ProjectCard from "@components/card/projectCard";
 
 // Controllers
 // import ProjectCard from "@components/card/projectCard";
-import dynamic from "next/dynamic";
-import Loader from "../loader";
-const ProjectCard = dynamic(() => import("@components/card/projectCard"));
 const Projects = () => {
   const messages: any = useMessages();
   const [projectsArr, setProjectsArr] = useState<ProjectsArr[] | undefined>();
@@ -63,13 +61,9 @@ const Projects = () => {
       pageTitle="projects"
     >
       <div className="w-full flex flex-col gap-10">
-        {projectsDynamicArr && projectsDynamicArr.length > 0 ? (
-          projectsDynamicArr.map((item: ProjectsArr, index: number) => (
-            <ProjectCard item={item} index={index} key={index} />
-          ))
-        ) : (
-          <Loader />
-        )}
+        {projectsDynamicArr?.map((item: ProjectsArr, index: number) => (
+          <ProjectCard item={item} index={index} key={index} />
+        ))}
       </div>
     </PageLayout>
   );
