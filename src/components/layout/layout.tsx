@@ -11,6 +11,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
   };
   return (
     <>
+    s
       <Sidebar isActive={sidebarIsActive} closeSidebar={closeSidebar} />
       <div className="w-full bg-white nav h-auto rounded overflow-auto no-scrollbar px-5 md:px-10 lg:px-20">
         {/* <Header :isActive="sidebarActive" @toggleSidebar="toggleSidebar" /> */}
