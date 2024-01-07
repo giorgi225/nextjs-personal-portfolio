@@ -35,7 +35,7 @@ const ProjectCard = ({ item, index }: { item: any; index: number }) => {
           width={800}
           style={{ width: "auto" }}
           height={400}
-          loading={"lazy"}
+          loading={"eager"}
         />
       </div>
       <div className="w-full flex flex-col gap-3 pt-2 pb-4 border-b-2 border-dashed border-grayLight2">
