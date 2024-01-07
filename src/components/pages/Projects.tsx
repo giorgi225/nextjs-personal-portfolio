@@ -13,9 +13,8 @@ import ProjectCard from "@components/card/projectCard";
 
 // Controllers
 // import ProjectCard from "@components/card/projectCard";
-const Projects = () => {
+const Projects = (projectsArr: ProjectsArr[]) => {
   const messages: any = useMessages();
-  const [projectsArr, setProjectsArr] = useState<ProjectsArr[] | undefined>();
   const projectsFilter: FilterBtnsArr[] = [
     {
       text: messages["all"],
