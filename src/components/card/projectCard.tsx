@@ -39,8 +39,9 @@ const ProjectCard = ({ item, index }: { item: any; index: number }) => {
           src={item.image}
           alt={item.title}
           quality={100}
-          width={500}
-          height={500}
+          width={800}
+          style={{ width: "auto" }}
+          height={400}
           loading="lazy"
         />
       </div>
