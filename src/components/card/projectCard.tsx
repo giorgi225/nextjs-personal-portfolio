@@ -1,26 +1,19 @@
 // Next
-import React, { useCallback, useState } from "react";
 import { useMessages } from "next-intl";
+import React from "react";
 import Image from "next/image";
 // Types
 import { ProjectsArr } from "@/types/pages/project.types";
 // Components
 import IconBase from "../icon/IconBase";
-import Loader from "../loader";
+
 const ProjectCard = ({ item, index }: { item: any; index: number }) => {
   const messages: any = useMessages();
-  // const [loading, setLoading] = useState(true);
-
-  // const handleLoad = useCallback(() => {
-  //   setLoading(false);
-  // }, []);
   return (
     <div className="w-full flex flex-col gap-2">
       <div
         className={`relative w-full group overflow-hidden projects-card rounded-[11px]`}
       >
-        {/* {loading && <Loader />} */}
-
         <div className="group-hover:opacity-100 opacity-0 rounded-[11px] absolute left-0 top-0 flex justify-center items-center p-6 w-full h-full bg-overlay-50 transition-all z-[9]">
           <a
             href={item.link}
