@@ -1,6 +1,6 @@
 // Next
 import { useMessages } from "next-intl";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 // Types
 import { ProjectsArr } from "@/types/pages/project.types";
@@ -32,10 +32,10 @@ const ProjectCard = ({ item, index }: { item: any; index: number }) => {
           src={item.image}
           alt={item.title}
           quality={100}
-          width={800}
-          layout="responsive"
           style={{ width: "auto" }}
+          width={400}
           height={400}
+          layout="responsive"
           loading={"eager"}
         />
       </div>
