@@ -23,12 +23,12 @@ const FilterBtns = ({ filterBtns, filterSelected, onFilter }: FilterBtnProps) =>
           key={index}
           className={`${activeBtnClassname(
             item
-          )} flex items-end gap-2 px-4 py-2 bg-grayLight hover:bg-grayLight2 rounded transition-all`}
+          )} flex items-end gap-2 px-4 h-[34px] justify-center py-2 bg-grayLight hover:bg-grayLight2 rounded transition-all`}
         >
           {item.icon && <IconBase icon={item.icon} className="text-md" />}
           <p
             className={`${
-              item.text === "all" ? "" : "hidden md:flex"
+              index === 0 ? "" : "hidden md:flex"
             } font-mainMedium text-xs leading-[20px]`}
           >
             {item.text}

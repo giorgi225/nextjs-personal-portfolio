@@ -1,6 +1,5 @@
-"use server"
 import Projects from "@/components/pages/Projects";
-import { ProjectsArr, PromiseProjectsArr } from "@/types/pages/project.types";
+import { ProjectsArr} from "@/types/pages/project.types";
 import { headers } from "next/headers";
 
 async function getProjectsData(

@@ -1,6 +1,5 @@
 // Next
 import { useMessages } from "next-intl";
-import React, { useEffect, useState } from "react";
 import Image from "next/image";
 // Types
 import { ProjectsArr } from "@/types/pages/project.types";

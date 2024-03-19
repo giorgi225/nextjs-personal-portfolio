@@ -17,7 +17,7 @@
           "programingLanguageIcon": "mdi:tailwind"
         }
       ],
-      "image": "https://upcdn.io/FW25bqg/raw/goodfriend.jpg",
+      "image": "/images/projects/goodfriend.svg",
       "link": "https://demo.goodfriendsgaming.com/"
     },
     {
@@ -34,7 +34,7 @@
           "programingLanguageIcon": "solar:figma-outline"
         }
       ],
-      "image": "https://upcdn.io/FW25bqg/raw/socialplatform.jpg",
+      "image": "/images/projects/socialplatform.svg",
       "link": "https://www.figma.com/proto/tVVpeVqlRkDc7507zpttsu/Social-Platform?page-id=0%3A1&type=design&node-id=86-6&viewport=447%2C272%2C0.1&t=cJagNm7Uk3OcvGir-1&scaling=min-zoom&mode=design"
     },
     {
@@ -51,8 +51,8 @@
           "programingLanguageIcon": "solar:figma-outline"
         }
       ],
-      "image": "https://upcdn.io/FW25bqg/raw/serwish.jpg",
-      "link": "https://serwish.ge/"
+      "image": "/images/projects/serwish.svg",
+      "link": "https://serwish.ge"
     },
     {
       "title": "aped_(trading_platform)",
@@ -72,7 +72,7 @@
           "programingLanguageIcon": "mdi:tailwind"
         }
       ],
-      "image": "https://upcdn.io/FW25bqg/raw/aped.jpg",
+      "image": "/images/projects/aped.svg",
       "link": "https://aped.xyz/"
     },
     {
@@ -89,7 +89,7 @@
           "programingLanguageIcon": "solar:figma-outline"
         }
       ],
-      "image": "https://upcdn.io/FW25bqg/raw/flickers.jpg",
+      "image": "/images/projects/flickers.svg",
       "link": "https://www.figma.com/proto/id3IOeaBxJUYKfmbb3NHO0/Untitled?page-id=10%3A7023&node-id=11-7207&mode=design&t=Akdp1Jcu4WyJl7Zb-1"
     },
     {
@@ -122,7 +122,7 @@
           "programingLanguageIcon": "fluent:javascript-20-regular"
         }
       ],
-      "image": "https://upcdn.io/FW25bqg/raw/cinemania.jpg",
+      "image": "/images/projects/cinemania.svg",
       "link": "https://cinemania22.netlify.app/"
     }
   ]
