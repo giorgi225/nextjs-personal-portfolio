@@ -14,7 +14,7 @@ const ProjectCard = ({ project, messages }: Props) => {
   return (
     <div className="w-full flex flex-col gap-2">
       <div
-        className={`group relative w-full h-[260px] sm:h-[360px] max-h-[360px] overflow-hidden projects-card rounded-[11px]`}
+        className={`group relative w-full h-[190px] sm:h-[360px] max-h-[360px] overflow-hidden projects-card rounded-[11px]`}
       >
         <HoverContent project={project} messages={messages} />
 
