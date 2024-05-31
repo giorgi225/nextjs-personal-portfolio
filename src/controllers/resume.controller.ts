@@ -42,56 +42,50 @@ export const resumeArr: ResumeArr[] = [
 export const skillsArr: any = [
   {
     title: "Html",
-    icon: "icon-park-solid:html-five",
-    startYear: "2022",
+    icon: "skill-icons:html",
+    startYear: "2020",
     startMonth: "0" // jan
   },
   {
     title: "Css",
-    icon: "uiw:css3",
-    startYear: "2022",
+    icon: "skill-icons:css",
+    startYear: "2020",
     startMonth: "0"
-  },
-  {
-    title: "Tailwind Css",
-    icon: "simple-icons:tailwindcss",
-    startYear: "2022",
-    startMonth: "6"
   },
   {
     title: "JavaScript",
-    icon: "fluent:javascript-20-filled",
-    startYear: "2022",
-    startMonth: "6"
+    icon: "vscode-icons:file-type-js-official",
+    startYear: "2020",
+    startMonth: "5"
+  },
+  {
+    title: "Tailwind Css",
+    icon: "skill-icons:tailwindcss-dark",
+    startYear: "2021",
+    startMonth: "5"
   },
   {
     title: "Typescript",
-    icon: "akar-icons:typescript-fill",
-    startYear: "2023",
-    startMonth: "2"
-  },
-  {
-    title: "ReactJs + NextJs",
-    icon: "mdi:react",
-    startYear: "2023",
-    startMonth: "6"
-  },
-  {
-    title: "VueJs",
-    icon: "ri:vuejs-fill",
-    startYear: "2023",
-    startMonth: "0"
-  },
-  {
-    title: "NodeJs + Express",
-    icon: "teenyicons:nodejs-solid",
-    startYear: "2023",
-    startMonth: "6"
-  },
-  {
-    title: "Figma",
-    icon: "solar:figma-bold",
+    icon: "logos:typescript-icon",
     startYear: "2022",
     startMonth: "5"
   },
+  {
+    title: "React (Nextjs)",
+    icon: "devicon:nextjs",
+    startYear: "2022",
+    startMonth: "5"
+  },
+  {
+    title: "Figma",
+    icon: "skill-icons:figma-dark",
+    startYear: "2022",
+    startMonth: "5"
+  },
+  {
+    title: "NodeJs + Express",
+    icon: "skill-icons:nodejs-dark",
+    startYear: "2023",
+    startMonth: "5"
+  }
 ];

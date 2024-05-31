@@ -24,16 +24,16 @@
   "web_designer": "Web Designer",
   "developer": "Developer",
 
-  "welcome_text": "I am Gigi Shalamberidze, Web Developer & Web Designer with 2 years experience from Tbilisi, Georgia.",
+  "welcome_text": "Hi! I am Gigi Shalamberidze, Web Developer & Designer with 4 years experience from Tbilisi, GEORGIA.",
 
   "freelancer": "Freelancer",
   "with": "With",
   "years_experience": "Years Experience",
   "hire_me": "Hire Me",
 
-  "about_introduction": "Welcome to my corner of the digital realm! I'm Gigi Shalamberidze, a passionate web developer and creative web designer with 2 years experience. With a keen eye for aesthetics and a love for coding, I bring imagination to life through captivating websites. ",
+  "about_introduction": "Welcome to my corner of the digital realm! I'm Gigi Shalamberidze, a passionate web developer and creative web designer with 4 years experience. With a keen eye for aesthetics and a love for coding, I bring imagination to life through captivating websites. ",
   "digital_journey": "The beginning of the digital journey",
-  "digital_journey_text": "My journey in the digital world started with a spark of curiosity. Armed with determination and a desire to learn, I set out on the path of programming. It all began 2 years ago with online tutorials and courses that introduced me to the fundamentals of HTML, CSS, and JavaScript. The online community became my classroom, providing the resources and support I needed to take my first steps into the world of coding.",
+  "digital_journey_text": "My journey in the digital world started with a spark of curiosity. Armed with determination and a desire to learn, I set out on the path of programming. It all began 4 years ago with online tutorials and courses that introduced me to the fundamentals of HTML, CSS, and JavaScript. The online community became my classroom, providing the resources and support I needed to take my first steps into the world of coding.",
 
   "learning_landscape": "The Learning Landscape",
   "learning_landscape_text": "My learning adventure was a mix of self-discovery and online guidance. Platforms like Codecademy, freeCodeCamp, and YouTube tutorials served as my mentors. The satisfaction of translating lines of code into functional web pages kept me engaged. As my skills grew, I explored more advanced concepts, embracing the power of libraries and frameworks like Vue.js and React.js. This hands-on approach not only solidified my understanding but also fueled my passion for crafting digital experiences",
@@ -76,6 +76,8 @@
   "flickers_(e_commerse)": "Flickers (E-commerse)",
   "cinemania_(online_movies)": "Cinemania (Online Movies)",
   "serwish_(services_website)": "Serwish.ge (services website)",
+  "metrix_(repair_company)": "Metrix (Repair Company)",
+  "imperial_tours": "Imperial tours (Tourist Company)",
 
   "development": "Development",
   "development_description": "Functionality meets creativity. I'm all about turning designs into fully operational websites or web applications. From online stores to interactive web solutions, I'm here to make sure your ideas work perfectly on the web.",

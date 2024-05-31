@@ -1,52 +1,42 @@
 // Next
-import { useMessages } from "next-intl";
 import Image from "next/image";
 // Types
-import { ProjectsArr } from "@/types/pages/project.types";
+import { ProjectType } from "@/types/pages/project.types";
 // Components
 import IconBase from "../icon/IconBase";
 
-const ProjectCard = ({ item, index }: { item: any; index: number }) => {
-  const messages: any = useMessages();
+type Props = {
+  project: ProjectType;
+  messages: any;
+}
+
+const ProjectCard = ({ project, messages }: Props) => {
   return (
     <div className="w-full flex flex-col gap-2">
       <div
-        className={`relative w-full group overflow-hidden projects-card rounded-[11px]`}
+        className={`group relative w-full h-[260px] sm:h-[360px] max-h-[360px] overflow-hidden projects-card rounded-[11px]`}
       >
-        <div className="group-hover:opacity-100 opacity-0 rounded-[11px] absolute left-0 top-0 flex justify-center items-center p-6 w-full h-full bg-overlay-50 transition-all z-[9]">
-          <a
-            href={item.link}
-            target="_blank"
-            className="bg-white h-max rounded-full px-4 py-2 flex items-center gap-[6px]"
-          >
-            <IconBase icon="ph:link-bold" className="text-xl text-black" />
-            <p className="font-mainMedium text-md text-black">
-              {messages["open_project"]}
-            </p>
-          </a>
-        </div>
+        <HoverContent project={project} messages={messages} />
 
         <Image
-          className={`w-full rounded-[11px] group-hover:scale-[1.1] group-hover:blur-sm transition-all duration-500`}
-          src={item.image}
-          alt={item.title}
+          className={`rounded-[11px] object-cover group-hover:scale-[1.1] group-hover:blur-sm transition-all duration-500`}
+          src={project.image}
+          alt={project.title}
           quality={100}
-          style={{ width: "auto" }}
-          width={400}
-          height={400}
-          layout="responsive"
-          loading={"eager"}
+          priority={true}
+          fill
         />
       </div>
+
       <div className="w-full flex flex-col gap-3 pt-2 pb-4 border-b-2 border-dashed border-grayLight2">
         <div className="w-full flex items-center justify-between gap-4">
-          <p className="flex font-mainBold text-xl md:text-2xl text-black">
-            {messages[item.title]}
-          </p>
+          <h2 className="flex font-mainBold text-xl text-black">
+            {messages[project.title]}
+          </h2>
           <div className="flex items-center gap-2">
-            {item.category.map(
+            {project.category.map(
               (
-                categoryItem: ProjectsArr["category"][0],
+                categoryItem: ProjectType["category"][0],
                 categoryIndex: number
               ) => (
                 <div
@@ -69,17 +59,17 @@ const ProjectCard = ({ item, index }: { item: any; index: number }) => {
           </div>
         </div>
         <div className="flex flex-wrap items-center gap-[6px]">
-          {item.skills.map(
-            (skill: ProjectsArr["skills"][0], skillIndex: number) => (
+          {project.skills.map(
+            (skill: ProjectType["skills"][0], skillIndex: number) => (
               <div
                 key={skillIndex}
-                className="flex items-center py-[6px] px-4 gap-[6px] bg-grayLight rounded-full"
+                className="flex items-center py-[6px] px-2 pr-3 gap-[6px] bg-grayLight rounded-full"
               >
                 <IconBase
                   icon={skill.programingLanguageIcon}
-                  className="text-black"
+                  className="text-black w-5 h-5 rounded-full"
                 />
-                <p className="font-mainLight text-xs md:text-sm text-black">
+                <p className="font-bold text-[12px] tracking-widest text-black">
                   {skill.programingLanguage}
                 </p>
               </div>
@@ -90,5 +80,22 @@ const ProjectCard = ({ item, index }: { item: any; index: number }) => {
     </div>
   );
 };
+
+const HoverContent = ({ project, messages }: Props)=> {
+  return (
+    <div className="group-hover:opacity-100 opacity-0 rounded-[11px] absolute left-0 top-0 flex justify-center items-center p-6 w-full h-full bg-overlay-50 transition-all z-[9]">
+    <a
+      href={project.link}
+      target="_blank"
+      className="bg-white h-max rounded-full px-4 py-2 flex items-center gap-[6px]"
+    >
+      <IconBase icon="ph:link-bold" className="text-xl text-black" />
+      <p className="font-mainMedium text-md text-black">
+        {messages["open_project"]}
+      </p>
+    </a>
+  </div>
+  )
+}
 
 export default ProjectCard;

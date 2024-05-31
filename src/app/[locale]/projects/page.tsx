@@ -1,32 +1,70 @@
-import Projects from "@/components/pages/Projects";
-import { ProjectsArr} from "@/types/pages/project.types";
-import { headers } from "next/headers";
+import { getMessages } from "next-intl/server";
 
-async function getProjectsData(
-  nextApiUrl: string
-): Promise<ProjectsArr[] | undefined> {
-  try {
-    const res = await fetch(`${nextApiUrl}/projects`);
-    if (!res.ok) {
-      return;
-    }
-    const data = await res.json();
-    return data.data;
-  } catch (err) {
-    console.log(err);
-    return;
+// Types
+import { FilterBtnsArr } from "@/types/components/filterBtns.types";
+import { ProjectType } from "@/types/pages/project.types";
+
+// Components
+import PageLayout from "@components/layout/pageLayout";
+import ProjectCard from "@components/card/projectCard";
+
+// Projects JSON
+import ProjectsJson from '@/projectsData.json';
+
+type Props = {
+  searchParams: {
+    filterBy: 'all' | 'coding' | 'design' | undefined
   }
 }
-export default async function Page() {
-  const headersList = headers();
-  const dynamicNextApiUrl =
-    headersList.get("x-nextApiUrl") || "http://localhost:3000/api";
-  const data: ProjectsArr[] | undefined = await getProjectsData(
-    dynamicNextApiUrl
-  );
+
+export default async function Page({searchParams}: Props) {
+  const { filterBy } = searchParams;
+
+  const messages: any = await getMessages();
+  const projects: ProjectType[] = ProjectsJson;
+
+  
+  const projectsFilter: FilterBtnsArr[] = [
+    {
+      text: messages["all"],
+      val: "all",
+    },
+    {
+      icon: "solar:code-broken",
+      text: messages["coding"],
+      val: "coding",
+    },
+    {
+      icon: "fluent:design-ideas-16-regular",
+      text: messages["design"],
+      val: "design",
+    },
+  ];
+  
+  const filterByIsCorrect = filterBy && ['all', 'coding', 'design'].includes(filterBy.toLowerCase());
+  const selectedFilter: FilterBtnsArr['val'] = filterByIsCorrect ? filterBy : projectsFilter[1].val;
+
+  const filteredProjects: ProjectType[] = selectedFilter === "all" 
+  ? projects 
+  : projects.filter((project) => 
+      project.category.some((category) => category.text === selectedFilter)
+    );
+  
+
   return (
-    <>
-      <Projects projectsArr={data} />
-    </>
-  );
+    <PageLayout
+      pageTitle="projects"
+      // for filter
+      filterBtns={projectsFilter}
+      filterBtnsSelected={selectedFilter}
+      searchParamName="filterBy"
+    >
+      <div className="w-full flex flex-col gap-10">
+        {filteredProjects.map((project: ProjectType, index: number) => (
+          <ProjectCard key={index} project={project} messages={messages} />
+        ))}
+      </div>
+    </PageLayout>
+  )
 }
+

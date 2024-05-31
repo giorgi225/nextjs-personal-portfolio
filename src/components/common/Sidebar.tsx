@@ -1,4 +1,3 @@
-// Next
 // Types
 import type { SidebarProps } from "@/types/components/sidebar.types";
 

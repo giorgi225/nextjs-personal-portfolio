@@ -6,7 +6,7 @@ interface CategoryArr {
   text: string;
   icon: string;
 }
-export interface ProjectsArr {
+export interface ProjectType {
   title: string;
   category: CategoryArr[];
   image: string;

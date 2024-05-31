@@ -2,18 +2,31 @@ import {
   FilterBtnProps,
   FilterBtnsArr,
 } from "@/types/components/filterBtns.types";
-import React, { MouseEventHandler } from "react";
+import React, { MouseEventHandler, useState } from "react";
 import IconBase from "../icon/IconBase";
+import { useSearchParams } from "next/navigation";
+import { usePathname, useRouter } from "@/navigation";
 
-const FilterBtns = ({ filterBtns, filterSelected, onFilter }: FilterBtnProps) => {
+const FilterBtns = ({ filterBtns, filterSelected, searchParamName }: FilterBtnProps) => {
+  const searchParams = useSearchParams();
+  const router = useRouter();
+  const pathname = usePathname();
+
+  // for fast iteraction
+  const [active, setActive] = useState(filterSelected)
+
   const activeBtnClassname = (item: FilterBtnsArr) => {
-    return filterSelected.toLowerCase() === item.val.toLowerCase()
+    return active === item.val.toLowerCase()
       ? "!bg-black text-white"
       : "text-black";
   };
+
   const handleFilter = (val: FilterBtnsArr["val"]) => {
-    const value: FilterBtnsArr["val"] = val.toLowerCase();
-    onFilter(value)
+    setActive(val)
+    const newSearchParams = new URLSearchParams(searchParams.toString());
+    newSearchParams.set(searchParamName, val.toLowerCase())
+    router.push(pathname + '?' + newSearchParams.toString(), {scroll: false})
+
   };
   return (
     <div className="flex items-center gap-[6px]">

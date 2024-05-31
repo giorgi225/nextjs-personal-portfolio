@@ -7,5 +7,5 @@ export type FilterBtnsArr = {
 export type FilterBtnProps = {
   filterBtns: FilterBtnsArr[];
   filterSelected: FilterBtnsArr["val"];
-  onFilter: (val: FilterBtnsArr["val"]) => {};
+  searchParamName: string;
 };

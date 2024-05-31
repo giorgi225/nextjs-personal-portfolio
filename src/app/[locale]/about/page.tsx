@@ -1,13 +1,12 @@
-// Next
-import { useMessages } from "next-intl";
+import { getMessages } from "next-intl/server";
 
 // Components
 import ContactInformation from "@/components/contact/ContactInformation";
 import PageLayout from "@/components/layout/pageLayout";
 import Paragraph from "@/components/ui/Paragraph";
 
-const About = () => {
-  const messages: any = useMessages();
+const About = async() => {
+  const messages: any = await getMessages();
   return (
     <PageLayout pageTitle="about" pageIntroduction="about_introduction">
       <Paragraph

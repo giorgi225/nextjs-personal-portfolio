@@ -7,31 +7,24 @@ import {
   FilterBtnsArr,
 } from "@/types/components/filterBtns.types";
 import FilterBtns from "@components/filter/FilterBtns";
-import { useState } from "react";
 
 const PageLayout = ({
   pageTitle,
   pageIntroduction,
   filterBtns,
   filterBtnsSelected,
-  onFilter,
+  searchParamName,
   children,
 }: {
   pageTitle: string;
   pageIntroduction?: string;
   filterBtns?: FilterBtnsArr[];
-  onFilter?: FilterBtnProps["onFilter"];
+  searchParamName?: string;
   filterBtnsSelected?: FilterBtnsArr["val"];
   children: React.ReactNode;
 }) => {
   const messages: any = useMessages();
 
-  const handleFilter = (val: FilterBtnsArr["val"]) => {
-    if (onFilter && filterBtns) {
-      onFilter(val);
-    }
-    return val;
-  };
   return (
     <div className="container-main  py-5 lg:py-20 scale-animation">
       <div className="w-full flex flex-col gap-6">
@@ -39,11 +32,11 @@ const PageLayout = ({
           <h2 className="font-mainMedium text-2xl text-black">
             {messages[pageTitle]}
           </h2>
-          {filterBtns && filterBtnsSelected && (
+          {filterBtns && filterBtnsSelected && searchParamName && (
             <FilterBtns
               filterBtns={filterBtns}
               filterSelected={filterBtnsSelected}
-              onFilter={handleFilter}
+              searchParamName={searchParamName}
             />
           )}
         </div>

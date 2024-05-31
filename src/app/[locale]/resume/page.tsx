@@ -16,12 +16,15 @@ const Resume = () => {
   const messages: any = useMessages();
 
   useEffect(() => {
-    const calculateExperience = (startYear: number, startMonth: number) => {
-      const startDate = new Date(startYear, startMonth - 1);
+    const calculateExperience = (startYear: string, startMonth: string) => {
+      const startDate = new Date(parseInt(startYear), parseInt(startMonth) - 1);
       const currentDate = new Date();
       const diffInMonths = (currentDate.getMonth() - startDate.getMonth()) + 12 * (currentDate.getFullYear() - startDate.getFullYear());
-
-      return (diffInMonths / 12).toFixed(1);
+    
+      const experienceInYears = diffInMonths / 12;
+      const formattedExperience = experienceInYears % 1 === 0 ? experienceInYears.toString() : experienceInYears.toFixed(1);
+    
+      return formattedExperience;
     };
 
     const updatedSkillsArr = skillsArr.map((item: any) => ({
@@ -40,7 +43,6 @@ const Resume = () => {
             </h5>
             {items.items.map((item: ResumeItems, itemIndex: number) => (
               <div
-                v-for="(item, itemIndex) in items.items"
                 key={itemIndex}
                 className="flex flex-col gap-4 w-full border border-dashed border-grayDark px-3 py-4 rounded"
               >
@@ -71,12 +73,12 @@ const Resume = () => {
         </h5>
         <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
           {dynamicSkillsArr.map((item: any, index: number) => (
-            <div className="p-4 flex flex-col items-center gap-1 bg-grayLight shadow-sm border-dashed  rounded-[4px]">
+            <div key={index} className="p-4 flex flex-col items-center gap-1 bg-grayLight shadow-sm border-dashed  rounded-[4px]">
               <IconBase
                 icon={item.icon}
-                className="text-black text-3xl rounded-[4px] p-2 border border-grayLight"
+                className="w-8 h-8"
               />
-              <p className="text-black text-sm text-center font-mainMedium">
+              <p className="text-black text-sm text-center font-mainBold">
                 {item.title}
               </p>
               <p className="text-sm font-mainMedium italic">{item.experienceYear} year</p>

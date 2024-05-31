@@ -1,11 +1,12 @@
 "use client";
 // Next
 import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 
 // Components
 import Sidebar from "@components/common/Sidebar";
-import { usePathname } from "next/navigation";
-import Loader from "../loader";
+import Loader from "@components/loader";
+import Header from "@components/common/Header";
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   const pathname = usePathname();
@@ -25,7 +26,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
     <>
       <Sidebar isActive={sidebarIsActive} closeSidebar={closeSidebar} />
       <div className="relative w-full bg-white nav h-auto rounded overflow-auto no-scrollbar px-5 md:px-10 lg:px-20">
-        {/* <Header :isActive="sidebarActive" @toggleSidebar="toggleSidebar" /> */}
+        <Header isActive={sidebarIsActive} onToggleSidebar={closeSidebar} />
         {children}
         {loading && (
           <Loader className="!h-screen absolute bg-white top-0 left-0 w-full z-[9999] rounded-none backdrop-blur-lg" />
