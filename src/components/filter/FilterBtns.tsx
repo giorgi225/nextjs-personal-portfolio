@@ -41,7 +41,7 @@ const FilterBtns = ({ filterBtns, filterSelected, searchParamName }: FilterBtnPr
           {item.icon && <IconBase icon={item.icon} className="text-md" />}
           <p
             className={`${
-              index === 0 ? "" : "hidden md:flex"
+              index === 0 || active === item.val.toLowerCase() ? "" : "hidden md:flex"
             } font-mainMedium text-xs leading-[20px]`}
           >
             {item.text}
