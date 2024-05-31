@@ -31,7 +31,7 @@ const Header = ({ isActive, onToggleSidebar }: Props) => {
         </Link>
         <div onClick={handleToggleSidebar} className="cursor-pointer">
             <IconBase
-              icon={isActive ? "gg:menu-right-alt" : "iconamoon:close-fill"}
+              icon={!isActive ? "gg:menu-right-alt" : "iconamoon:close-fill"}
               className="text-black-80 hover:text-black w-8 h-8 transition-all active:scale-95"
             />
         </div>
