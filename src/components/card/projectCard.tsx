@@ -8,22 +8,23 @@ import IconBase from "../icon/IconBase";
 type Props = {
   project: ProjectType;
   messages: any;
+  index: number;
 }
 
-const ProjectCard = ({ project, messages }: Props) => {
+const ProjectCard = ({ project, index, messages }: Props) => {
   return (
     <div className="w-full flex flex-col gap-2">
       <div
         className={`group relative w-full h-[190px] sm:h-[360px] max-h-[360px] overflow-hidden projects-card rounded-[11px]`}
       >
-        <HoverContent project={project} messages={messages} />
+        <HoverContent project={project} index={index} messages={messages} />
 
         <Image
           className={`rounded-[11px] object-cover group-hover:scale-[1.1] group-hover:blur-sm transition-all duration-500`}
           src={project.image}
           alt={project.title}
           quality={100}
-          priority={true}
+          priority={index > 1 ? false : true}
           fill
         />
       </div>

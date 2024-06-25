@@ -61,7 +61,7 @@ export default async function Page({searchParams}: Props) {
     >
       <div className="w-full flex flex-col gap-10">
         {filteredProjects.map((project: ProjectType, index: number) => (
-          <ProjectCard key={index} project={project} messages={messages} />
+          <ProjectCard key={index} project={project} messages={messages} index={index} />
         ))}
       </div>
     </PageLayout>
