@@ -25,6 +25,7 @@ const ProjectCard = ({ project, index, messages }: Props) => {
           alt={project.title}
           quality={100}
           priority={index > 1 ? false : true}
+          sizes="100vh"
           fill
         />
       </div>
