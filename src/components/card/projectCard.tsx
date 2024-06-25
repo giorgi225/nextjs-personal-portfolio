@@ -25,7 +25,7 @@ const ProjectCard = ({ project, index, messages }: Props) => {
           alt={project.title}
           quality={100}
           priority={index > 1 ? false : true}
-          sizes="100vh"
+          sizes="(max-width: 640px) 600px, (max-width: 2048px) 1500px"
           fill
         />
       </div>
