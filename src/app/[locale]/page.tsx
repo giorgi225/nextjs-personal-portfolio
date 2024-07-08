@@ -2,6 +2,43 @@
 import { getMessages } from "next-intl/server";
 import Image from "next/image";
 
+export async function generateMetadata({
+  params,
+}: {
+  params: { locale: string};
+}) {
+  const { locale } = params;
+
+  return {
+    title: "Web Developer & Designer | shalamberidze gigi's portfolio",
+    description:
+      "I am Gigi Shalamberidze, Web Developer & Web Designer with 4 years experience from Tbilisi, Georgia",
+    keywords: [
+      "developer",
+      "designer",
+      "freelancer",
+      "professional",
+      "shalamberidze",
+      "gigi shalameridze",
+    ],
+    alternates: {
+      canonical: `${process.env.NEXT_PUBLIC_WEBSITE_URL}/en`,
+      languages: {
+        en: `${process.env.NEXT_PUBLIC_WEBSITE_URL}/en`,
+        ka: `${process.env.NEXT_PUBLIC_WEBSITE_URL}/ka`,
+      },
+    },
+    openGraph: {
+      url: `${process.env.NEXT_PUBLIC_WEBSITE_URL}/${locale}`,
+      type: "website",
+      title: "Web Developer & Designer | shalamberidze gigi's portfolio",
+      description:
+        "I am Gigi Shalamberidze, Web Developer & Web Designer with 4 years experience from Tbilisi, Georgia",
+      images: `${process.env.NEXT_PUBLIC_WEBSITE_URL}/profile.png`,
+    },
+  };
+}
+
 export default async function Home() {
   const messages: any = await getMessages();
   return (
@@ -27,9 +64,7 @@ export default async function Home() {
             <p className="font-mainMedium text-base text-black-80 md:max-w-[418px]">
               {messages["welcome_text"]}
             </p>
-            <button
-              className="w-max px-7 py-3 bg-grayLight rounded text-sm font-mainMedium hover:bg-black-80 text-black hover:text-white hover:shadow-md active:scale-[0.98] active:bg-black transition-all"
-            >
+            <button className="w-max px-7 py-3 bg-grayLight rounded text-sm font-mainMedium hover:bg-black-80 text-black hover:text-white hover:shadow-md active:scale-[0.98] active:bg-black transition-all">
               {messages["hire_me"]}
             </button>
           </div>
