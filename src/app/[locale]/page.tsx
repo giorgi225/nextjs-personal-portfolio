@@ -1,4 +1,5 @@
 // Next
+import { Link } from "@/navigation";
 import { getMessages } from "next-intl/server";
 import Image from "next/image";
 
@@ -64,9 +65,9 @@ export default async function Home() {
             <p className="font-mainMedium text-base text-black-80 md:max-w-[418px]">
               {messages["welcome_text"]}
             </p>
-            <button className="w-max px-7 py-3 bg-grayLight rounded text-sm font-mainMedium hover:bg-black-80 text-black hover:text-white hover:shadow-md active:scale-[0.98] active:bg-black transition-all">
-              {messages["hire_me"]}
-            </button>
+            <a href={`/shalamberidze_gigi_cv.pdf`} download className="w-max px-7 py-3 bg-grayLight rounded text-sm font-mainMedium hover:bg-black-80 text-black hover:text-white hover:shadow-md active:scale-[0.98] active:bg-black transition-all">
+              {messages["download_cv"]}
+            </a>
           </div>
         </div>
       </div>

@@ -7,7 +7,7 @@ export const resumeArr: ResumeArr[] = [
       {
         title: "international_black_sea_university",
         text: "computer_science",
-        date: "2022",
+        date: "2020",
         present: true,
         description: "international_black_sea_university_description",
       },
@@ -25,14 +25,26 @@ export const resumeArr: ResumeArr[] = [
       {
         title: "freelancer",
         text: "web_developer_&_web_designer",
-        date: "2022",
+        date: "2022jan",
         present: true,
         description: "freelancer_description",
       },
       {
+        title: "imperial_tours_company",
+        text: "web_designer",
+        date: "2024 jan - 2024 aug",
+        description: "imperialtours_description",
+      },
+      {
+        title: "repair_company_metrix",
+        text: "nextjs_developer",
+        date: "2023 feb - 2023 oct",
+        description: "repair_company_description",
+      },
+      {
         title: "viptrade",
         text: "frontend_developer",
-        date: "2022 - 2023",
+        date: "2022 jan - 2023 jan",
         description: "viptrade_description",
       },
     ],
@@ -44,19 +56,19 @@ export const skillsArr: any = [
     title: "Html",
     icon: "skill-icons:html",
     startYear: "2020",
-    startMonth: "0" // jan
+    startMonth: "8" // jan
   },
   {
     title: "Css",
     icon: "skill-icons:css",
     startYear: "2020",
-    startMonth: "0"
+    startMonth: "8"
   },
   {
     title: "JavaScript",
     icon: "vscode-icons:file-type-js-official",
-    startYear: "2020",
-    startMonth: "5"
+    startYear: "2021",
+    startMonth: "0"
   },
   {
     title: "Tailwind Css",
