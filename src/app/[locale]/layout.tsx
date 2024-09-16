@@ -10,7 +10,7 @@ import "@styles/base.css";
 
 export const metadata: Metadata = {
   title: "Shalamberidze's Portfolio",
-  description: "I am Gigi Shalamberidze, Web Developer & Web Designer with 2 years experience from Tbilisi, Georgia",
+  description: "I am Gigi Shalamberidze, Full-stack developer with more than 4 years experience from Tbilisi, Georgia",
   keywords: ['developer', 'designer', 'freelancer', 'professional', 'gigi shalamberidze', 'giorgi shalameridze']
 };
 

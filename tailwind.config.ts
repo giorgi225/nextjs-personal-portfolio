@@ -26,10 +26,10 @@ const config: Config = {
         "orange": "var(--orange)"
       },
       fontSize: {
-        "xs": "13px",
-        "sm": "14px",
-        "base": "16px",
-        "md": "18px",
+        "xs": "14px",
+        "sm": "15px",
+        "base": "17px",
+        "md": "19px",
         "xl": "20px",
         "2xl": "36px",
         "3xl": "48px",

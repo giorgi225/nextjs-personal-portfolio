@@ -60,7 +60,7 @@ const NavList = ({
                   >
                     <IconBase
                       icon={item.icon}
-                      className="text-black text-base"
+                      className="text-black w-5 h-5 text-base"
                     />
                     <p className="font-mainMedium text-xs text-black">
                       {messages[item.text]}
@@ -75,7 +75,7 @@ const NavList = ({
                   >
                     <IconBase
                       icon={item.icon}
-                      className="text-black text-base"
+                      className="text-black w-5 h-5 text-base"
                     />
                     <p className="font-mainMedium text-xs text-black">
                       {messages[item.text]}
@@ -88,7 +88,7 @@ const NavList = ({
                     <div className="min-w-max md:min-w-auto hidden md:flex flex-col md:flex-row items-center gap-2">
                       <IconBase
                         icon={item.icon}
-                        className="text-black text-base"
+                        className="text-black w-5 h-5 text-base"
                       />
                       {item.text.replace(/\s+/g, "") ===
                       process.env.NEXT_PUBLIC_PHONE ? (
@@ -121,7 +121,7 @@ const NavList = ({
                     <div className="min-w-max md:min-w-auto md:hidden flex flex-col md:flex-row items-center gap-2">
                       <IconBase
                         icon={item.icon}
-                        className="text-black text-base"
+                        className="text-black w-5 h-5 text-base"
                       />
                       <p className="font-mainMedium text-xs text-black lowercase">
                         {item.text.length > 9
@@ -156,7 +156,7 @@ const NavList = ({
                     <div className="flex flex-col md:flex-row items-center gap-2">
                       <IconBase
                         icon={item.icon}
-                        className="text-black text-base"
+                        className="text-black w-5 h-5 text-base"
                       />
                       <p className="font-mainMedium text-xs text-black lowercase">
                         {item.text}

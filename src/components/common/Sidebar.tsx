@@ -17,16 +17,17 @@ import LanguageSelect from "@components/common/LangSelect";
 import IconBase from "@components/icon/IconBase";
 import { useMessages } from "next-intl";
 import ThemeSwitcher from "./ThemeSwitcher";
-import dynamic from "next/dynamic";
-const NavList = dynamic(()=> import("./NavList"))
+import NavList from "./NavList";
 
 const Sidebar = ({ isActive, closeSidebar }: SidebarProps) => {
   const messages: any = useMessages();
+
   const sidebarToggleClassname = () => {
     return isActive
       ? "md:fixed md:left-[0px] bg-grayLight shadow-xl"
       : "md:fixed md:left-[-100%]";
   };
+
   const handleCloseSidebar = () => {
     closeSidebar();
   };
@@ -39,18 +40,21 @@ const Sidebar = ({ isActive, closeSidebar }: SidebarProps) => {
         <div className="flex flex-col items-start gap-4 w-full">
           <Logo />
           <Nav>
+
             <NavList
               title="pages"
               menu={PagesMenu}
               hasRoutes={true}
               closeSidebar={handleCloseSidebar}
             />
+
             <NavList
               title="get_in_touch"
               menu={ContactMenu}
               copyFun={true}
               closeSidebar={handleCloseSidebar}
             />
+
             <NavList
               title="social_platforms"
               menu={SocialPlatformMenu}
