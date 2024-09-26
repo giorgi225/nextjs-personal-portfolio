@@ -46,21 +46,21 @@ const Resume = () => {
                 key={itemIndex}
                 className="flex flex-col gap-4 w-full border border-dashed border-grayDark px-3 py-4 rounded"
               >
-                <div className="flex flex-col gap-1">
-                  <p className="font-mainBold text-lg text-black-80 leading-[20px]">
+                <div className="flex flex-col gap-0">
+                  <p className="font-mainBold text-lg text-gray-900/80 dark:text-gray-200/80 leading-7">
                     {messages[item.title]}
                   </p>
                   <div className="flex items-center gap-2">
-                    <p className="font-mainLight text-sm text-black leading-[20px]">
+                    <p className="font-mainMedium text-sm text-black leading-7">
                       {messages[item.text]}
                     </p>
-                    <p className="font-mainLight italic text-sm text-black-80 leading-[20px]">
+                    <p className="font-mainMedium italic text-sm text-gray-900/80 dark:text-gray-200/80 leading-7">
                       {item.date}
                       {item.present ? "- " + messages["present"] : ""}
                     </p>
                   </div>
                 </div>
-                <p className="font-mainLight text-sm text-black-80 leading-[20px] pr-1">
+                <p className="font-mainMedium text-sm text-gray-900/80 dark:text-gray-200/80 leading-7 pr-1">
                   {messages[item.description]}
                 </p>
               </div>
@@ -81,7 +81,7 @@ const Resume = () => {
               <p className="text-black text-sm text-center font-mainBold">
                 {item.title}
               </p>
-              <p className="text-sm font-mainMedium italic">{item.experienceYear} year</p>
+              <p className="text-sm font-mainMedium text-gray-900 dark:text-gray-200 italic">{item.experienceYear} year</p>
             </div>
           ))}
         </div>

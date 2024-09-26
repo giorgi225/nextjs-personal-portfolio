@@ -22,10 +22,11 @@ body {
 .container-main {
   max-width: 1000px;
 }
+
 @media screen and (min-width: theme("screens.lg")) {
   .container-main {
     width: 100%;
-    max-width: 700px;
+    max-width: 1000px;
     margin: 0 auto;
   }
 }

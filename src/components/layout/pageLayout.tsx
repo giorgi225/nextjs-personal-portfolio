@@ -26,10 +26,10 @@ const PageLayout = ({
   const messages: any = useMessages();
 
   return (
-    <div className="container-main  py-5 lg:py-20 scale-animation">
-      <div className="w-full flex flex-col gap-6">
+    <div className="container-main py-5 lg:py-20 scale-animation">
+      <div className="w-full flex flex-col gap-2">
         <div className="w-full flex flex-col md:flex-row items-start md:items-center justify-between gap-10 md:gap-0">
-          <h2 className="font-mainMedium text-2xl text-black">
+          <h2 className="font-mainBold text-2xl text-gray-900 dark:text-gray-200">
             {messages[pageTitle]}
           </h2>
           {filterBtns && filterBtnsSelected && searchParamName && (
@@ -41,7 +41,7 @@ const PageLayout = ({
           )}
         </div>
         {pageIntroduction && (
-          <p className="font-mainLight text-sm text-black leading-[20px]">
+          <p className="font-mainMedium text-sm text-gray-900/80 dark:text-gray-200/80 leading-7">
             {messages[pageIntroduction]}
           </p>
         )}

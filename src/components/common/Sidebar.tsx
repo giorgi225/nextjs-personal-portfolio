@@ -42,7 +42,7 @@ const Sidebar = ({ isActive, closeSidebar }: SidebarProps) => {
           <Nav>
 
             <NavList
-              title="pages"
+              title=""
               menu={PagesMenu}
               hasRoutes={true}
               closeSidebar={handleCloseSidebar}
@@ -60,20 +60,6 @@ const Sidebar = ({ isActive, closeSidebar }: SidebarProps) => {
               menu={SocialPlatformMenu}
               hasLinks={true}
             />
-
-            <NavList title="settings" customProp={true}>
-              <ThemeSwitcher />
-
-              <div className="group flex flex-col md:flex-row items-center justify-between w-full px-2 py-2 rounded hover:bg-grayLight2 transition-all">
-                <div className="flex items-center gap-2">
-                  <IconBase icon="et:global" className="text-black text-base" />
-                  <p className="hidden md:flex font-mainMedium text-xs text-black">
-                    {messages["language"]}
-                  </p>
-                </div>
-                <LanguageSelect messages={messages} />
-              </div>
-            </NavList>
           </Nav>
         </div>
         <Copyright />

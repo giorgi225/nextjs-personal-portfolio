@@ -19,7 +19,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
     setLoading(true);
     const delay = setTimeout(() => {
       setLoading(false);
-    }, 300);
+    }, 10);
     return () => clearTimeout(delay);
   }, [pathname]);
   return (

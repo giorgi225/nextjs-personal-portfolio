@@ -15,7 +15,7 @@ const ProjectCard = ({ project, index, messages }: Props) => {
   return (
     <div className="w-full flex flex-col gap-2">
       <div
-        className={`group relative w-full h-[190px] sm:h-[360px] max-h-[360px] overflow-hidden projects-card rounded-[11px]`}
+        className={`group relative w-full h-[190px] sm:h-[480px] max-h-[480px] overflow-hidden projects-card rounded-[11px]`}
       >
         <HoverContent project={project} index={index} messages={messages} />
 
@@ -25,7 +25,7 @@ const ProjectCard = ({ project, index, messages }: Props) => {
           alt={project.title}
           quality={100}
           priority={index > 1 ? false : true}
-          sizes="(max-width: 640px) 600px, (max-width: 2048px) 1500px"
+          sizes="(max-width: 640px) 600px, (max-width: 2048px) 2000px"
           fill
         />
       </div>

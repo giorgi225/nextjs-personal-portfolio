@@ -7,27 +7,27 @@ const PagesMenu: Menu[] = [
   {
     to: Route.HOME,
     text: "home",
-    icon: "clarity:home-line",
+    icon: "solar:home-2-outline",
   },
   {
     to: Route.ABOUT,
     text: "about",
-    icon: "solar:user-broken",
+    icon: "solar:user-linear",
   },
   {
     to: Route.PROJECTS,
     text: "projects",
-    icon: "solar:code-broken",
+    icon: "solar:code-linear",
   },
   {
     to: Route.SERVICES,
     text: "services",
-    icon: "carbon:application-web",
+    icon: "hugeicons:computer",
   },
   {
     to: Route.RESUME,
     text: "resume",
-    icon: "fluent:hat-graduation-20-regular",
+    icon: "fluent:hat-graduation-16-regular",
   },
 ];
 
@@ -39,13 +39,13 @@ const ContactMenu: Menu[] = [
   // },
   {
     text: "gigi.shalamberidze2022@gmail.com",
-    icon: "mdi-light:email-open",
+    icon: "mage:email",
     secondIcon: "solar:copy-outline",
     copyFun: "copyEmail",
   },
   {
     text: "+995 574 17 51 88",
-    icon: "solar:phone-outline",
+    icon: "solar:phone-rounded-outline",
     secondIcon: "solar:copy-outline",
     copyFun: "copyPhone",
   },
@@ -54,29 +54,28 @@ const ContactMenu: Menu[] = [
 const SocialPlatformMenu: Menu[] = [
   {
     text: "Facebook",
-    link: process.env.NEXT_PUBLIC_FACEBOOK_URL,
-    icon: "brandico:facebook-rect",
+    link: process.env.NEXT_PUBLIC_FACEBOOK_URL || "",
+    icon: "hugeicons:facebook-01",
     secondIcon: "ion:open-outline",
   },
   {
     text: "Dribbble",
-    link: process.env.NEXT_PUBLIC_DRIBBBLE_URL,
-    icon: "fa6-brands:square-dribbble",
+    link: process.env.NEXT_PUBLIC_DRIBBBLE_URL || "",
+    icon: "hugeicons:dribbble",
     secondIcon: "ion:open-outline",
   },
   {
     text: "Github",
-    link: process.env.NEXT_PUBLIC_GITHUB_URL,
-    icon: "skill-icons:github-dark",
+    link: process.env.NEXT_PUBLIC_GITHUB_URL || "",
+    icon: "hugeicons:github",
     secondIcon: "ion:open-outline",
   },
   {
     text: "Linkedin",
-    link: process.env.NEXT_PUBLIC_LINKEDIN_URL, 
-    icon: "fa:linkedin-square",
+    link: process.env.NEXT_PUBLIC_LINKEDIN_URL || "",
+    icon: "hugeicons:linkedin-01",
     secondIcon: "ion:open-outline",
   },
 ];
 
 export { PagesMenu, ContactMenu, SocialPlatformMenu };
-export default Menu;

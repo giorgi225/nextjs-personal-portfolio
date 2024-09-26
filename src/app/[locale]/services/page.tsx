@@ -17,12 +17,12 @@ const Services = () => {
             className="flex flex-col gap-3 w-full px-3 py-4 border border-dashed border-grayDark rounded hover:bg-grayLight hover:cursor-help transition-all"
           >
             <div className="flex items-center gap-[6px]">
-              <IconBase icon={item.icon} className="text-xl text-black" />
-              <p className="font-mainLight text-sm text-black leading-[20px]">
+              <IconBase icon={item.icon} className="w-7 h-7 text-gray-900 dark:text-gray-200" />
+              <p className="font-mainBold text-md text-gray-900/80 dark:text-gray-200/80 leading-7">
                 {messages[item.title]}
               </p>
             </div>
-            <p className="font-mainLight text-sm text-black-80 leading-[20px]">
+            <p className="font-mainMedium text-sm text-gray-900/80 dark:text-gray-200/80 leading-7">
               {messages[item.description]}
             </p>
           </div>

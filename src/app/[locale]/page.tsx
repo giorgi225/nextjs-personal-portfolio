@@ -7,7 +7,7 @@ import Image from "next/image";
 export async function generateMetadata({
   params,
 }: {
-  params: { locale: string};
+  params: { locale: string };
 }) {
   const { locale } = params;
 
@@ -67,11 +67,31 @@ export default async function Home() {
               {messages["welcome_text"]}
             </p>
             <div className="flex items-center gap-2">
-              <a href={`/shalamberidze_gigi_cv.pdf`} download className="w-max px-7 py-3 bg-grayLight rounded text-sm font-mainMedium hover:bg-black-80 text-black hover:text-white hover:shadow-md active:scale-[0.98] active:bg-black transition-all">
-                {messages["download_cv"]}
+              <a
+                href={`/shalamberidze_gigi_cv.pdf`}
+                download
+                className="w-max flex text-sm px-4 gap-2 py-3 bg-grayLight rounded-[8px] font-mainMedium hover:bg-black-80 text-slate-900 hover:text-white hover:shadow-md active:scale-[0.98] active:bg-black transition-all"
+              >
+                <IconBase
+                  className="w-6 h-6 group-hover:text-white"
+                  icon={`solar:file-download-linear`}
+                />
+                <span className="translate-y-[2px]">
+                  {messages["download_cv"]}
+                </span>
               </a>
-              <Link href={`https://github.com/giorgi225/nextjs-personal-portfolio`} target="_blank" className="group flex items-center justify-center h-[46px] w-[46px] bg-grayLight rounded text-sm font-mainMedium hover:border-blue-600 border border-transparent text-black hover:text-white hover:shadow-md active:scale-[0.98]  transition-all">
-                <IconBase className="w-6 h-6 group-hover:text-white" icon={`logos:github-icon`} />
+              <Link
+                href={`https://github.com/giorgi225/nextjs-personal-portfolio`}
+                target="_blank"
+                className="w-max h-[46px] flex items-center text-sm px-4 gap-2 py-3 rounded-[8px] font-mainMedium hover:text-prett text-slate-900 hover:text-yellow-400 active:scale-[0.98] transition-all"
+              >
+                <span>
+                  {messages["about_me"]}
+                </span>
+                <IconBase
+                  className="w-6 h-6 group-hover:text-white"
+                  icon={`solar:arrow-right-linear`}
+                />
               </Link>
             </div>
           </div>
