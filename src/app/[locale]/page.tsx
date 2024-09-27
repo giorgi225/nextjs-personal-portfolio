@@ -55,17 +55,17 @@ export default async function Home() {
         </div>
         <div className="flex items-center">
           <div className="flex flex-col gap-8 mt-8">
-            <div dangerouslySetInnerHTML={{__html: messages["welcome_text"]}} className="font-mainMedium leading-7 text-sm text-slate-900 md:max-w-[800px]"/>
+            <div dangerouslySetInnerHTML={{__html: messages["welcome_text"]}} className="font-mainMedium leading-6 sm:leading-7 text-[13px] sm:text-sm text-slate-900 md:max-w-[800px]"/>
 
             <div className="flex items-center gap-6">
               <div className="flex items-center gap-2">
                 <a
                   href={`/shalamberidze_gigi_cv.pdf`}
                   download
-                  className="w-max flex text-sm px-4 gap-2 py-3 bg-teal-50 rounded-[12px] font-mainMedium hover:bg-teal-900 hover:text-white text-teal-900 border border-teal-900 hover:shadow-md active:scale-[0.98] active:bg-teal-900 transition-all"
+                  className="w-max flex text-[13px] sm:text-sm px-4 gap-2 py-3 bg-teal-50 rounded-[12px] font-mainMedium hover:bg-teal-900 hover:text-white text-teal-900 border border-teal-900 hover:shadow-md active:scale-[0.98] active:bg-teal-900 transition-all"
                 >
                   <IconBase
-                    className="w-6 h-6 group-hover:text-white"
+                    className="w-5 sm:w-6 ha-5 sm:h-6 group-hover:text-white"
                     icon={`solar:file-download-linear`}
                   />
                   <span className="translate-y-[2px]">
@@ -74,7 +74,7 @@ export default async function Home() {
                 </a>
                 <Link
                   href={Route.PROJECTS}
-                  className="w-max h-[46px] flex items-center text-sm px-4 gap-2 py-3 rounded-[12px] font-mainMedium hover:text-prett text-slate-900 hover:text-teal-600 active:scale-[0.98] transition-all"
+                  className="w-max h-[46px] flex items-center text-[13px] sm:text-sm px-4 gap-2 py-3 rounded-[12px] font-mainMedium text-slate-900 hover:text-teal-600 active:scale-[0.98] transition-all"
                 >
                   <span>{messages["projects"]}</span>
                   <IconBase

@@ -1,4 +1,4 @@
-"use client"
+"use client";
 // Next
 import { useMessages } from "next-intl";
 // Typese
@@ -19,11 +19,17 @@ const Resume = () => {
     const calculateExperience = (startYear: string, startMonth: string) => {
       const startDate = new Date(parseInt(startYear), parseInt(startMonth) - 1);
       const currentDate = new Date();
-      const diffInMonths = (currentDate.getMonth() - startDate.getMonth()) + 12 * (currentDate.getFullYear() - startDate.getFullYear());
-    
+      const diffInMonths =
+        currentDate.getMonth() -
+        startDate.getMonth() +
+        12 * (currentDate.getFullYear() - startDate.getFullYear());
+
       const experienceInYears = diffInMonths / 12;
-      const formattedExperience = experienceInYears % 1 === 0 ? experienceInYears.toString() : experienceInYears.toFixed(1);
-    
+      const formattedExperience =
+        experienceInYears % 1 === 0
+          ? experienceInYears.toString()
+          : experienceInYears.toFixed(1);
+
       return formattedExperience;
     };
 
@@ -37,30 +43,30 @@ const Resume = () => {
     <PageLayout pageTitle="resume" pageIntroduction="resume_introduction">
       <div className="w-full flex flex-col gap-6">
         {resumeArr.map((items: ResumeArr, index: number) => (
-          <div key={index} className="flex flex-col gap-3">
-            <h5 className="font-mainMedium text-md text-black">
+          <div key={index} className="flex flex-col gap-1 sm:gap-3">
+            <h5 className="font-mainBold text-md text-black mt-2">
               {messages[items.mainTitle]}
             </h5>
             {items.items.map((item: ResumeItems, itemIndex: number) => (
               <div
                 key={itemIndex}
-                className="flex flex-col gap-4 w-full border border-dashed border-grayDark px-3 py-4 rounded"
+                className="flex flex-col gap-2 sm:gap-4 w-full border border-dashed border-grayDark p-3 sm:px-3 sm:py-4 rounded-[12px]"
               >
                 <div className="flex flex-col gap-0">
-                  <p className="font-mainBold text-lg text-gray-900/80 dark:text-gray-200/80 leading-7">
+                  <h2 className="font-mainBold text-sm sm:text-lg text-gray-900/80 dark:text-gray-200/80 sm:leading-7">
                     {messages[item.title]}
-                  </p>
+                  </h2>
                   <div className="flex items-center gap-2">
-                    <p className="font-mainMedium text-sm text-black leading-7">
+                    <p className="font-mainMedium text-[13px] sm:text-sm text-black sm:leading-7">
                       {messages[item.text]}
                     </p>
-                    <p className="font-mainMedium italic text-sm text-gray-900/80 dark:text-gray-200/80 leading-7">
+                    <p className="font-mainMedium italic text-[13px] sm:text-sm text-gray-900/80 dark:text-gray-200/80 sm:leading-7">
                       {item.date}
                       {item.present ? "- " + messages["present"] : ""}
                     </p>
                   </div>
                 </div>
-                <p className="font-mainMedium text-sm text-gray-900/80 dark:text-gray-200/80 leading-7 pr-1">
+                <p className="font-mainMedium text-[13px] sm:text-sm text-gray-900/80 dark:text-gray-200/80 leading-6 sm:leading-7 pr-1">
                   {messages[item.description]}
                 </p>
               </div>
@@ -68,22 +74,26 @@ const Resume = () => {
           </div>
         ))}
 
-        <h5 className="font-mainMedium text-md text-black">
-          {messages["skills"]}
-        </h5>
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-          {dynamicSkillsArr.map((item: any, index: number) => (
-            <div key={index} className="p-4 flex flex-col items-center gap-1 bg-grayLight shadow-sm border-dashed  rounded-[4px]">
-              <IconBase
-                icon={item.icon}
-                className="w-8 h-8"
-              />
-              <p className="text-black text-sm text-center font-mainBold">
-                {item.title}
-              </p>
-              <p className="text-sm font-mainMedium text-gray-900 dark:text-gray-200 italic">{item.experienceYear} year</p>
-            </div>
-          ))}
+        <div className="flex flex-col gap-1 sm:gap-3">
+          <h5 className="font-mainBold text-md text-black mt-2">
+            {messages["skills"]}
+          </h5>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            {dynamicSkillsArr.map((item: any, index: number) => (
+              <div
+                key={index}
+                className="p-4 flex flex-col items-center gap-1 bg-grayLight shadow-sm border-dashed  rounded-[4px]"
+              >
+                <IconBase icon={item.icon} className="w-8 h-8" />
+                <p className="text-black text-sm text-center font-mainBold">
+                  {item.title}
+                </p>
+                <p className="text-sm font-mainMedium text-gray-900 dark:text-gray-200 italic">
+                  {item.experienceYear} year
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
 

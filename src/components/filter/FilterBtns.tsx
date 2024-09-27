@@ -36,15 +36,16 @@ const FilterBtns = ({ filterBtns, filterSelected, searchParamName }: FilterBtnPr
           key={index}
           className={`${activeBtnClassname(
             item
-          )} flex items-end gap-2 px-4 h-[34px] justify-center py-2 bg-grayLight hover:bg-grayLight2 rounded-[4px] transition-all`}
+          )} flex items-center justify-center gap-2 px-[10px] sm:px-4 h-[34px] py-2 bg-grayLight hover:bg-grayLight2 rounded-[4px] transition-all`}
         >
-          {item.icon && <IconBase icon={item.icon} className="text-md" />}
+          {item.icon && <IconBase icon={item.icon} className="w-4 h-4" />}
           <p
             className={`${
               index === 0 || active === item.val.toLowerCase() ? "" : "hidden md:flex"
-            } font-mainMedium text-xs leading-[20px]`}
+            } font-mainMedium text-[13px] sm:text-xs leading-[20px]`}
           >
             {item.text}
+  
           </p>
         </button>
       ))}
