@@ -1,5 +1,6 @@
 // Next
 import IconBase from "@/components/icon/IconBase";
+import { Route } from "@/enums/routes.enum";
 import { Link } from "@/navigation";
 import { getMessages } from "next-intl/server";
 import Image from "next/image";
@@ -44,55 +45,44 @@ export async function generateMetadata({
 export default async function Home() {
   const messages: any = await getMessages();
   return (
-    <div className="grid md:grid-cols-2 lg:grid-cols-1 lg:grid-rows-[auto,1fr] gap-6 w-full md:px-10 overflow-hidden pt-10 md:pt-20 scale-animation">
-      <div className="w-full h-full md:min-w-max">
+    <div className="flex gap-6 w-full md:px-10 overflow-hidden pt-10 md:pt-20 scale-animation">
+      <div className="w-full h-full flex flex-col">
         <div className="flex items-end gap-6">
-          <h1 className="font-mainBlack text-[48px] leading-[56px] md:text-[6vw] text-black md:max-w-[48vw]  md:leading-[6vw] tracking-[1px]">
-            {messages["web_designer"]}{" "}
+          <h1 className="font-mainBlack text-[48px] leading-[56px] xl:text-[5vw] text-slate-900 md:max-w-[48vw] xl:leading-[5vw] tracking-[1px]">
+            {messages["web_designer"]}
             <span className="text-stroke-black"> {messages["developer"]}</span>
           </h1>
         </div>
-        <div className="flex items-center gap-6 md:mt-6 md:translate-x-[-40px]">
-          <div className="w-full hidden md:flex max-w-[67px]">
-            <Image
-              width="100"
-              height="100"
-              className="w-full toggle-image"
-              src="/images/pointerArrow.svg"
-              alt="Pointer-Arrow"
-            />
-          </div>
-          <div className="flex flex-col gap-8 mt-4 md:mt-8">
-            <p className="font-mainMedium leading-7 text-base text-black-80 md:max-w-[418px]">
-              {messages["welcome_text"]}
-            </p>
-            <div className="flex items-center gap-2">
-              <a
-                href={`/shalamberidze_gigi_cv.pdf`}
-                download
-                className="w-max flex text-sm px-4 gap-2 py-3 bg-grayLight rounded-[8px] font-mainMedium hover:bg-black-80 text-slate-900 hover:text-white hover:shadow-md active:scale-[0.98] active:bg-black transition-all"
-              >
-                <IconBase
-                  className="w-6 h-6 group-hover:text-white"
-                  icon={`solar:file-download-linear`}
-                />
-                <span className="translate-y-[2px]">
-                  {messages["download_cv"]}
-                </span>
-              </a>
-              <Link
-                href={`https://github.com/giorgi225/nextjs-personal-portfolio`}
-                target="_blank"
-                className="w-max h-[46px] flex items-center text-sm px-4 gap-2 py-3 rounded-[8px] font-mainMedium hover:text-prett text-slate-900 hover:text-yellow-400 active:scale-[0.98] transition-all"
-              >
-                <span>
-                  {messages["about_me"]}
-                </span>
-                <IconBase
-                  className="w-6 h-6 group-hover:text-white"
-                  icon={`solar:arrow-right-linear`}
-                />
-              </Link>
+        <div className="flex items-center">
+          <div className="flex flex-col gap-8 mt-8">
+            <div dangerouslySetInnerHTML={{__html: messages["welcome_text"]}} className="font-mainMedium leading-7 text-sm text-slate-900 md:max-w-[800px]"/>
+
+            <div className="flex items-center gap-6">
+              <div className="flex items-center gap-2">
+                <a
+                  href={`/shalamberidze_gigi_cv.pdf`}
+                  download
+                  className="w-max flex text-sm px-4 gap-2 py-3 bg-teal-50 rounded-[12px] font-mainMedium hover:bg-teal-900 hover:text-white text-teal-900 border border-teal-900 hover:shadow-md active:scale-[0.98] active:bg-teal-900 transition-all"
+                >
+                  <IconBase
+                    className="w-6 h-6 group-hover:text-white"
+                    icon={`solar:file-download-linear`}
+                  />
+                  <span className="translate-y-[2px]">
+                    {messages["download_cv"]}
+                  </span>
+                </a>
+                <Link
+                  href={Route.PROJECTS}
+                  className="w-max h-[46px] flex items-center text-sm px-4 gap-2 py-3 rounded-[12px] font-mainMedium hover:text-prett text-slate-900 hover:text-teal-600 active:scale-[0.98] transition-all"
+                >
+                  <span>{messages["projects"]}</span>
+                  <IconBase
+                    className="w-6 h-6 group-hover:text-white"
+                    icon={`solar:arrow-right-linear`}
+                  />
+                </Link>
+              </div>
             </div>
           </div>
         </div>

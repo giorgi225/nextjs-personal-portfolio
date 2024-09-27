@@ -25,7 +25,7 @@ const NavList = ({
   const messages: any = useMessages();
   // Generate active classname based on current route
   const activeRouteClassname = (currentRoute: string) => {
-    return pathname === currentRoute ? "!bg-white shadow-sm" : "";
+    return pathname === currentRoute ? "bg-white text-teal-600 hover:opacity-90 shadow-sm" : "hover:bg-white active:opacity-70";
   };
   // Functions
   const openModal = () => {};
@@ -43,7 +43,7 @@ const NavList = ({
   return (
     <>
       <div className="w-full flex flex-col gap-2 min-w-max md:min-w-auto">
-        <h6 className="hidden md:flex font-mainMedium text-xs text-slate-900 dark:text-gray-300 tracking-[4%]">
+        <h6 className="hidden md:flex font-mainMedium text-xs dark:text-gray-300 tracking-[4%]">
           {messages[title]}
         </h6>
         {!customProp && menu ? (
@@ -56,13 +56,13 @@ const NavList = ({
                     href={item.to}
                     className={`${activeRouteClassname(
                       item.to
-                    )} route min-w-max md:min-w-auto flex flex-col md:flex-row items-center gap-2 w-full px-2 py-3 rounded-[8px] hover:bg-slate-900/5 active:scale-[0.98] active:bg-grayLight2 transition-all`}
+                    )} route min-w-max md:min-w-auto flex flex-col md:flex-row items-center gap-2 w-full px-3 py-3 rounded-[12px] transition-all`}
                   >
                     <IconBase
                       icon={item.icon}
-                      className="text-slate-900 w-5 h-5 text-base"
+                      className="w-5 h-5 text-base"
                     />
-                    <p className="font-mainMedium text-xs text-slate-900">
+                    <p className="font-mainMedium text-xs">
                       {messages[item.text]}
                     </p>
                   </Link>
@@ -71,24 +71,24 @@ const NavList = ({
                 {item.openModal && (
                   <div
                     onClick={openModal}
-                    className="min-w-max md:min-w-auto flex flex-col md:flex-row items-center gap-2 w-full px-2 py-3 rounded-[8px] hover:bg-slate-900/5 cursor-pointer active:scale-[0.98] active:bg-grayLight2 transition-all"
+                    className="min-w-max md:min-w-auto flex flex-col md:flex-row items-center gap-2 w-full px-3 py-3 rounded-[12px] cursor-pointer transition-all"
                   >
                     <IconBase
                       icon={item.icon}
-                      className="text-slate-900 w-5 h-5 text-base"
+                      className="w-5 h-5 text-base"
                     />
-                    <p className="font-mainMedium text-xs text-slate-900">
+                    <p className="font-mainMedium text-xs">
                       {messages[item.text]}
                     </p>
                   </div>
                 )}
 
                 {item.secondIcon && item.copyFun && (
-                  <div className="relative clipboard flex items-start md:items-center justify-between w-full px-2 py-3 rounded-[8px] hover:bg-slate-900/5 transition-all">
+                  <div className="relative clipboard flex items-start md:items-center justify-between w-full px-3 py-3 rounded-[12px] transition-all">
                     <div className="min-w-max md:min-w-auto hidden md:flex flex-col md:flex-row items-center gap-2">
                       <IconBase
                         icon={item.icon}
-                        className="text-slate-900 w-5 h-5 text-base"
+                        className="w-5 h-5 text-base"
                       />
                       {item.text.replace(/\s+/g, "") ===
                       process.env.NEXT_PUBLIC_PHONE ? (
@@ -96,7 +96,7 @@ const NavList = ({
                           className="hover:text-blue-500 group underline"
                           href={`tel:${process.env.NEXT_PUBLIC_PHONE}`}
                         >
-                          <p className="font-mainMedium text-xs group-hover:text-blue-500 text-slate-900 lowercase">
+                          <p className="font-mainMedium text-xs group-hover:text-blue-500 lowercase">
                             {item.text.length > 18
                               ? item.text.slice(0, 18) + "..."
                               : item.text}
@@ -108,7 +108,7 @@ const NavList = ({
                           className="hover:text-blue-500 group underline"
                           href={`mailto:${process.env.NEXT_PUBLIC_EMAIL}`}
                         >
-                          <p className="font-mainMedium text-xs group-hover:text-blue-500 text-slate-900 lowercase">
+                          <p className="font-mainMedium text-xs group-hover:text-blue-500 lowercase">
                             {item.text.length > 18
                               ? item.text.slice(0, 18) + "..."
                               : item.text}
@@ -121,9 +121,9 @@ const NavList = ({
                     <div className="min-w-max md:min-w-auto md:hidden flex flex-col md:flex-row items-center gap-2">
                       <IconBase
                         icon={item.icon}
-                        className="text-slate-900 w-5 h-5 text-base"
+                        className="w-5 h-5 text-base"
                       />
-                      <p className="font-mainMedium text-xs text-slate-900 lowercase">
+                      <p className="font-mainMedium text-xs lowercase">
                         {item.text.length > 9
                           ? item.text.slice(0, 9) + "..."
                           : item.text}
@@ -137,12 +137,12 @@ const NavList = ({
                     >
                       <IconBase
                         icon={item.secondIcon}
-                        className="copy-icon text-grayDark text-base group-hover:text-slate-900 transition-all"
+                        className="copy-icon text-grayDark text-base group-hover:transition-all"
                       />
                     </div>
                     <IconBase
                       icon="ph:check"
-                      className="absolute md:relative md:right-inherit check-icon text-grayDark text-base group-hover:text-slate-900 transition-all"
+                      className="absolute md:relative md:right-inherit check-icon text-grayDark text-base group-hover:transition-all"
                     />
                   </div>
                 )}
@@ -151,20 +151,20 @@ const NavList = ({
                   <a
                     href={item.link}
                     target="_blank"
-                    className="min-w-max md:min-w-auto group flex items-start md:items-center justify-between w-full px-2 py-3 rounded-[8px] hover:bg-slate-900/5 active:scale-[0.98] active:bg-grayLight2 transition-all"
+                    className="min-w-max md:min-w-auto group flex items-start md:items-center justify-between w-full px-3 py-3 rounded-[12px] transition-all"
                   >
                     <div className="flex flex-col md:flex-row items-center gap-2">
                       <IconBase
                         icon={item.icon}
-                        className="text-slate-900 w-5 h-5 text-base"
+                        className="w-5 h-5 text-base"
                       />
-                      <p className="font-mainMedium text-xs text-slate-900 lowercase">
+                      <p className="font-mainMedium text-xs lowercase">
                         {item.text}
                       </p>
                     </div>
                     <IconBase
                       icon={item.secondIcon ? item.secondIcon : ""}
-                      className="hidden md:flex text-grayDark text-base group-hover:text-slate-900 transition-all"
+                      className="hidden md:flex text-grayDark text-base group-hover:transition-all"
                     />
                   </a>
                 )}

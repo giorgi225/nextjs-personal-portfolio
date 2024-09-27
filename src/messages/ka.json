@@ -25,8 +25,7 @@
   "web_designer": "Full Stack",
   "developer": "დეველოპერი",
 
-  "welcome_text": "მე ვარ გიგი შალამბერიძე, Full-stack დეველოპერი 4 წელზე მეტი გამოცდილებით თბილისიდან.",
-
+  "welcome_text": "მე ვარ <strong>Full-Stack Developer</strong> 4-წლიანი გამოცდილებით ფრონტენდ დეველოპმენტში, სპეციალიზირებული <em style='color: black'>HTML, CSS, JavaScript</em> და <em style='color: black'>React.js</em> ტექნოლოგიებში. ბოლო 2 წლის განმავლობაში გავაფართოვე ჩემი უნარები და გავხდი <strong>full-stack დეველოპერი</strong>, ვმუშაობ ისეთ ტექნოლოგიებთან, როგორიცაა <em style='color: black'>Next.js</em> და <em style='color: black'>Express.js</em>, რომ შევქმნა დინამიკური და მაღალეფექტიანი ვებ აპლიკაციები. <br /><br />  ვცხოვრობ <a style='color: #2f1fff; text-decoration: underline' href='https://en.wikipedia.org/wiki/Tbilisi'>თბილისში, საქართველოში</a>, მე გატაცებული ვარ ინტუიციური, საპასუხო და ვიზუალურად შთამბეჭდავი ვებ გამოცდილებების შექმნით, რომლებიც გამოიღებს შედეგებს. იქნება ეს გლუვი ფრონტენდის მშენებლობა თუ ბექენდის არქიტექტურა, ყოველთვის ვზრუნავ მასშტაბირებად და ოპტიმიზებულ გადაწყვეტილებებზე.",
   "freelancer": "ფრილანსერი",
   "with": "",
   "years_experience": "წლის გამოცდილებით",

@@ -25,7 +25,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
     <>
       <Sidebar isActive={sidebarIsActive} closeSidebar={closeSidebar} />
-      <div className="relative w-full bg-white nav h-auto rounded overflow-auto no-scrollbar px-5 md:px-10 lg:px-20">
+      <div className="relative w-full bg-white nav h-auto rounded-[24px] overflow-auto no-scrollbar px-5 md:px-10 lg:px-20">
         <Header isActive={sidebarIsActive} onToggleSidebar={closeSidebar} />
         {children}
         {loading && (

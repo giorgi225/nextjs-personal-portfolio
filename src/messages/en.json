@@ -25,8 +25,7 @@
   "web_designer": "Full Stack",
   "developer": "Developer",
 
-  "welcome_text": "Hi! I am Gigi Shalamberidze, Full-stack Developer with more than 4 years experience from Tbilisi, GEORGIA.",
-
+  "welcome_text": "I’m <strong>Full-Stack Developer</strong> with 4 years of experience in frontend development, specializing in <em style='color: black'>HTML, CSS, JavaScript</em> and <em style='color: black'>React.js</em>. Over the past 2 years, I’ve expanded my skills to become a <strong>full-stack developer</strong>, working with technologies like <em style='color: black'>Next.js</em> and <em style='color: black'>Express.js</em> to build dynamic and high-performing web applications. <br /><br /> Based in <a style='color: #2f1fff; text-decoration: underline' href='https://en.wikipedia.org/wiki/Tbilisi'>Tbilisi, Georgia</a>, I have a passion for crafting intuitive, responsive, and visually compelling web experiences that deliver results. Whether building a sleek frontend or architecting the backend, I always focus on delivering scalable, optimized solutions.",
   "freelancer": "Freelancer",
   "with": "With",
   "years_experience": "Years Experience",
@@ -107,5 +106,5 @@
   "repair_company_metrix": "Repair Company Metrix",
   "repair_company_description": "As a Next.js developer at Metrix Repair Company, I was responsible for developing full-stack applications, combining both frontend and backend expertise. My role involved building and maintaining responsive, high-performance web applications using the Next.js framework. I worked on creating seamless user interfaces, integrating complex backend services, and ensuring a smooth user experience. In addition to developing new features, I focused on optimizing application performance and implementing best practices for security and scalability. My work at Metrix Repair Company enabled the delivery of efficient and user-friendly solutions, contributing significantly to the company's digital transformation efforts.",
   "imperialtours_description": "I worked as a web designer at Imperial Tours, a company dedicated to providing travelers with the best tours in Georgia. In this role, I was responsible for designing and developing the company's website, ensuring a visually appealing and user-friendly experience for visitors. I collaborated closely with the marketing and content teams to create engaging web pages that effectively showcased the company's tour offerings. My work involved crafting responsive designs, optimizing the site's usability, and maintaining brand consistency across all digital platforms. This position allowed me to contribute to the growth of the company's online presence and enhance the overall customer experience.",
-    "download_cv": "Downlad CV"
+  "download_cv": "Downlad CV"
 }

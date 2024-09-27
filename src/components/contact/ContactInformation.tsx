@@ -32,7 +32,7 @@ const ContactInformation = () => {
       <div className="w-full flex flex-col gap-2 md:gap-6">
 
         <div className="w-full flex flex-col md:flex-row items-start gap-4 md:items-center justify-between pb-3 border-b border-dashed border-grayDark">
-          <div className="flex flex-col gap-1">
+          <div className="flex flex-col gap-1 ">
             <p className="font-mainBold text-sm text-gray-900/80 dark:text-gray-200/80 leading-[20px]">
               {messages["email"]}
             </p>
@@ -41,10 +41,10 @@ const ContactInformation = () => {
             </p>
           </div>
 
-          <div className="flex items-center">
+          <div className="flex items-center rounded-l-[12px] rounded-r-[12px] border border-grayLight2 divide-x-[1px] overflow-hidden">
             <a
               href="mailto:gigi.shalamberidze2022@gmail.com"
-              className="flex items-end gap-2 bg-transparent px-4 py-2 rounded-tl rounded-bl hover:bg-grayLight border border-r-0 border-grayLight2 active:scale-[0.98] transition-all"
+              className="flex items-end gap-2 bg-transparent px-4 py-2 hover:bg-grayLight active:scale-[0.98] transition-all"
             >
               <IconBase
                 icon="fluent:compose-24-regular"
@@ -57,7 +57,7 @@ const ContactInformation = () => {
             <div className="btn-copy clipboard">
               <button
                 onClick={(e) => handleCopy("copyEmail", e)}
-                className="btn-notCopy flex items-end gap-2 bg-transparent px-4 py-2 rounded-bt rounded-br hover:bg-grayLight border border-grayLight2 active:scale-[0.98] transition-all"
+                className="btn-notCopy flex items-end gap-2 bg-transparent px-4 py-2  hover:bg-grayLight  active:scale-[0.98] transition-all"
               >
                 <IconBase
                   icon="solar:copy-linear"
@@ -67,7 +67,7 @@ const ContactInformation = () => {
                   {messages["copy"]}
                 </p>
               </button>
-              <button className="copied-btn flex items-end gap-2 bg-transparent px-4 py-2 rounded-bt rounded-br hover:bg-grayLight border border-grayLight2 active:scale-[0.98] transition-all">
+              <button className="copied-btn flex items-end gap-2 bg-transparent px-4 py-2 hover:bg-grayLight  active:scale-[0.98] transition-all">
                 <IconBase
                   icon="ph:check"
                   className="check-icon w-5 h-5 text-gray-900/80 dark:text-gray-200/80"
@@ -80,7 +80,7 @@ const ContactInformation = () => {
           </div>
         </div>
         <div className="w-full flex flex-col md:flex-row items-start gap-4 md:items-center justify-between pb-3 border-b border-dashed border-grayDark">
-          <div className="flex flex-col gap-1">
+          <div className="flex flex-col gap-1 ">
             <p className="font-mainBold text-sm text-gray-900/80 dark:text-gray-200/80 leading-[20px]">
               {messages["phone"]}
             </p>
@@ -88,10 +88,10 @@ const ContactInformation = () => {
             {process.env.NEXT_PUBLIC_PHONE}
             </p>
           </div>
-          <div className="flex items-center">
+          <div className="flex items-center rounded-l-[12px] rounded-r-[12px] border border-grayLight2 divide-x-[1px] overflow-hidden">
             <a
               href="tel:+995574175188"
-              className="flex items-end gap-2 bg-transparent px-4 py-2 rounded-tl rounded-bl hover:bg-grayLight border border-r-0 border-grayLight2 active:scale-[0.98] transition-all"
+              className="flex items-end gap-2 bg-transparent px-4 py-2 hover:bg-grayLight active:scale-[0.98] transition-all"
             >
               <IconBase
                 icon="solar:phone-rounded-outline"
@@ -104,7 +104,7 @@ const ContactInformation = () => {
             <div className="btn-copy clipboard">
               <button
                 onClick={(e) => handleCopy("copyPhone", e)}
-                className="btn-notCopy flex items-end gap-2 bg-transparent px-4 py-2 rounded-bt rounded-br hover:bg-grayLight border border-grayLight2 active:scale-[0.98] transition-all"
+                className="btn-notCopy flex items-end gap-2 bg-transparent px-4 py-2 hover:bg-grayLight active:scale-[0.98] transition-all"
               >
                 <IconBase
                   icon="solar:copy-outline"
@@ -114,7 +114,7 @@ const ContactInformation = () => {
                   {messages["copy"]}
                 </p>
               </button>
-              <button className="copied-btn flex items-end gap-2 bg-transparent px-4 py-2 rounded-bt rounded-br hover:bg-grayLight border border-grayLight2 active:scale-[0.98] transition-all">
+              <button className="copied-btn flex items-end gap-2 bg-transparent px-4 py-2 hover:bg-grayLight active:scale-[0.98] transition-all">
                 <IconBase
                   icon="ph:check"
                   className="check-icon w-5 h-5 text-gray-900/80 dark:text-gray-200/80"
@@ -127,7 +127,7 @@ const ContactInformation = () => {
           </div>
         </div>
         <div className="w-full flex flex-col md:flex-row items-start gap-4 md:items-center justify-between pb-3 border-b border-dashed border-grayDark">
-          <div className="flex flex-col gap-1">
+          <div className="flex flex-col gap-1 ">
             <p className="font-mainBold text-sm text-gray-900/80 dark:text-gray-200/80 leading-[20px]">
               {messages["get_in_touch"]}
             </p>
@@ -135,12 +135,12 @@ const ContactInformation = () => {
               {messages["social_platforms"]}
             </p>
           </div>
-          <div className="flex items-center">
+          <div className="flex items-center rounded-l-[12px] rounded-r-[12px] border border-grayLight2 divide-x-[1px] overflow-hidden">
             {SocialPlatformMenu.map((item: Menu, index: number) => (
               <a
                 href={item.link}
                 key={index}
-                className="copied-btn flex items-end gap-2 bg-transparent px-4 py-2 hover:bg-grayLight border border border-grayLight2 active:scale-[0.98] transition-all"
+                className="copied-btn flex items-end gap-2 bg-transparent px-4 py-2 hover:bg-grayLight active:scale-[0.98] transition-all"
               >
                 <IconBase
                   icon={item.icon}

@@ -33,7 +33,7 @@ body {
 
 /* width */
 .no-scrollbar::-webkit-scrollbar {
-  width: 5px;
+  width: 6px;
 }
 /* Track */
 .no-scrollbar::-webkit-scrollbar-track {
@@ -46,7 +46,7 @@ body {
 }
 /* Handle on hover */
 .no-scrollbar:hover::-webkit-scrollbar-thumb {
-  background: theme("colors.grayDark");
+  @apply bg-black;
 }
 
 @media screen and (max-width: theme("screens.md")) {
