@@ -22,7 +22,7 @@ const Services = () => {
                 {messages[item.title]}
               </p>
             </div>
-            <p className="font-mainMedium text-[13px] sm:text-sm text-gray-900/80 dark:text-gray-200/80 leading-6 sm:eading-7">
+            <p className="font-mainMedium text-[13px] sm:text-sm text-gray-900/80 dark:text-gray-200/80 leading-5 sm:eading-7">
               {messages[item.description]}
             </p>
           </div>

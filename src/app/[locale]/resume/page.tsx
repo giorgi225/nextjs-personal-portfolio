@@ -66,7 +66,7 @@ const Resume = () => {
                     </p>
                   </div>
                 </div>
-                <p className="font-mainMedium text-[13px] sm:text-sm text-gray-900/80 dark:text-gray-200/80 leading-6 sm:leading-7 pr-1">
+                <p className="font-mainMedium text-[13px] sm:text-sm text-gray-900/80 dark:text-gray-200/80 leading-5 sm:leading-7 pr-1">
                   {messages[item.description]}
                 </p>
               </div>

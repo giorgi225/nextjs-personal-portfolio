@@ -55,7 +55,7 @@ export default async function Home() {
         </div>
         <div className="flex items-center">
           <div className="flex flex-col gap-8 mt-8">
-            <div dangerouslySetInnerHTML={{__html: messages["welcome_text"]}} className="font-mainMedium leading-6 sm:leading-7 text-[13px] sm:text-sm text-slate-900 md:max-w-[800px]"/>
+            <div dangerouslySetInnerHTML={{__html: messages["welcome_text"]}} className="font-mainMedium leading-5 sm:leading-7 text-[13px] sm:text-sm text-slate-900 md:max-w-[800px]"/>
 
             <div className="flex items-center gap-6">
               <div className="flex items-center gap-2">

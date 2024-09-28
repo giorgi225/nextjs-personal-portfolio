@@ -54,9 +54,10 @@ const NavList = ({
                   <Link
                     onClick={closeSidebar}
                     href={item.to}
+                    scroll={true}
                     className={`${activeRouteClassname(
                       item.to
-                    )} route min-w-max md:min-w-auto flex flex-col md:flex-row items-center gap-2 w-full px-3 py-3 rounded-[12px] transition-all`}
+                    )} route min-w-[100px] md:min-w-auto flex flex-col md:flex-row items-center gap-2 w-full px-3 py-3 rounded-[12px] transition-all`}
                   >
                     <IconBase
                       icon={item.icon}
@@ -67,7 +68,7 @@ const NavList = ({
                     </p>
                   </Link>
                 )}
-
+                
                 {item.openModal && (
                   <div
                     onClick={openModal}
