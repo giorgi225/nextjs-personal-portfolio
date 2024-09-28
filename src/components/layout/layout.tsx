@@ -28,9 +28,9 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
       <div className="relative w-full bg-white nav h-auto rounded-[24px] overflow-auto no-scrollbar px-5 md:px-10 lg:px-20">
         <Header isActive={sidebarIsActive} onToggleSidebar={closeSidebar} />
         {children}
-        {loading && (
+        {/* {loading && (
           <Loader className="!h-screen absolute bg-white top-0 left-0 w-full z-[9999] rounded-none backdrop-blur-lg" />
-        )}
+        )} */}
       </div>
     </>
   );
