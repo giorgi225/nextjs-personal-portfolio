@@ -1,5 +1,35 @@
 [
   {
+    "title": "vitistravel",
+    "category": [
+      {
+        "text": "coding",
+        "icon": "solar:code-broken"
+      }
+    ],
+    "skills": [
+      {
+        "programingLanguage": "React (Nextjs)",
+        "programingLanguageIcon": "devicon:nextjs"
+      },
+      {
+        "programingLanguage": "NodeJs",
+        "programingLanguageIcon": "skill-icons:nodejs-dark"
+      },
+      {
+        "programingLanguage": "TailwindCSS",
+        "programingLanguageIcon": "skill-icons:tailwindcss-dark"
+      },
+      {
+        "programingLanguage": "Figma",
+        "programingLanguageIcon": "skill-icons:figma-dark"
+      }
+    ],
+    "image": "/images/projects/vitistravel.jpg",
+    "link": "https://vitistravel.com"
+  },
+
+  {
     "title": "imperial_tours",
     "category": [
       {
@@ -92,114 +122,118 @@
     "image": "/images/projects/serwish.svg",
     "link": "https://serwish.ge"
   },
-    {
-      "title": "goodfriend_(online_cazino)",
-      "category": [
-        {
-          "text": "coding",
-          "icon": "solar:code-broken"
-        }
-      ],
-      "skills": [
-        {
-          "programingLanguage": "SvelteJS",
-          "programingLanguageIcon": "skill-icons:svelte"
-        },
-        {
-          "programingLanguage": "TailwindCSS",
-          "programingLanguageIcon": "skill-icons:tailwindcss-dark"
-        }
-      ],
-      "image": "/images/projects/goodfriend.svg",
-      "link": "https://demo.goodfriendsgaming.com/"
-    },
-    {
-      "title": "social_platform",
-      "category": [
-        {
-          "text": "design",
-          "icon": "fluent:design-ideas-16-regular"
-        }
-      ],
-      "skills": [
-        {
-          "programingLanguage": "Figma",
-          "programingLanguageIcon": "skill-icons:figma-dark"
-        }
-      ],
-      "image": "/images/projects/socialplatform.svg",
-      "link": "https://www.figma.com/proto/tVVpeVqlRkDc7507zpttsu/Social-Platform?page-id=0%3A1&type=design&node-id=86-6&viewport=447%2C272%2C0.1&t=cJagNm7Uk3OcvGir-1&scaling=min-zoom&mode=design"
-    },
-    {
-      "title": "aped_(trading_platform)",
-      "category": [
-        {
-          "text": "coding",
-          "icon": "solar:code-broken"
-        }
-      ],
-      "skills": [
-        {
-          "programingLanguage": "ReactJS",
-          "programingLanguageIcon": "vscode-icons:file-type-reactjs"
-        },
-        {
-          "programingLanguage": "TailwindCSS",
-          "programingLanguageIcon": "skill-icons:tailwindcss-dark"
-        }
-      ],
-      "image": "/images/projects/aped.svg",
-      "link": "https://aped.xyz/"
-    },
-    {
-      "title": "flickers_(e_commerce)",
-      "category": [
-        {
-          "text": "design",
-          "icon": "fluent:design-ideas-16-regular"
-        }
-      ],
-      "skills": [
-        {
-          "programingLanguage": "Figma",
-          "programingLanguageIcon": "skill-icons:figma-dark"
-        }
-      ],
-      "image": "/images/projects/flickers.svg",
-      "link": "https://www.figma.com/proto/id3IOeaBxJUYKfmbb3NHO0/Untitled?page-id=10%3A7023&node-id=11-7207&mode=design&t=Akdp1Jcu4WyJl7Zb-1"
-    },
-    {
-      "title": "cinemania_(online_movies)",
-      "category": [
-        {
-          "text": "design",
-          "icon": "fluent:design-ideas-16-regular"
-        },
-        {
-          "text": "coding",
-          "icon": "solar:code-broken"
-        }
-      ],
-      "skills": [
-        {
-          "programingLanguage": "Figma",
-          "programingLanguageIcon": "skill-icons:figma-dark"
-        },
-        {
-          "programingLanguage": "Html",
-          "programingLanguageIcon": "skill-icons:html"
-        },
-        {
-          "programingLanguage": "Css",
-          "programingLanguageIcon": "skill-icons:css"
-        },
-        {
-          "programingLanguage": "JavaScript",
-          "programingLanguageIcon": "vscode-icons:file-type-js-official"
-        }
-      ],
-      "image": "/images/projects/cinemania.svg",
-      "link": "https://cinemania22.netlify.app/"
-    }
-  ]
-  
+
+  {
+    "title": "goodfriend_(online_cazino)",
+    "category": [
+      {
+        "text": "coding",
+        "icon": "solar:code-broken"
+      }
+    ],
+    "skills": [
+      {
+        "programingLanguage": "SvelteJS",
+        "programingLanguageIcon": "skill-icons:svelte"
+      },
+      {
+        "programingLanguage": "TailwindCSS",
+        "programingLanguageIcon": "skill-icons:tailwindcss-dark"
+      }
+    ],
+    "image": "/images/projects/goodfriend.svg",
+    "link": "https://demo.goodfriendsgaming.com/"
+  },
+
+  {
+    "title": "social_platform",
+    "category": [
+      {
+        "text": "design",
+        "icon": "fluent:design-ideas-16-regular"
+      }
+    ],
+    "skills": [
+      {
+        "programingLanguage": "Figma",
+        "programingLanguageIcon": "skill-icons:figma-dark"
+      }
+    ],
+    "image": "/images/projects/socialplatform.svg",
+    "link": "https://www.figma.com/proto/tVVpeVqlRkDc7507zpttsu/Social-Platform?page-id=0%3A1&type=design&node-id=86-6&viewport=447%2C272%2C0.1&t=cJagNm7Uk3OcvGir-1&scaling=min-zoom&mode=design"
+  },
+
+  {
+    "title": "aped_(trading_platform)",
+    "category": [
+      {
+        "text": "coding",
+        "icon": "solar:code-broken"
+      }
+    ],
+    "skills": [
+      {
+        "programingLanguage": "ReactJS",
+        "programingLanguageIcon": "vscode-icons:file-type-reactjs"
+      },
+      {
+        "programingLanguage": "TailwindCSS",
+        "programingLanguageIcon": "skill-icons:tailwindcss-dark"
+      }
+    ],
+    "image": "/images/projects/aped.svg",
+    "link": "https://aped.xyz/"
+  },
+
+  {
+    "title": "flickers_(e_commerce)",
+    "category": [
+      {
+        "text": "design",
+        "icon": "fluent:design-ideas-16-regular"
+      }
+    ],
+    "skills": [
+      {
+        "programingLanguage": "Figma",
+        "programingLanguageIcon": "skill-icons:figma-dark"
+      }
+    ],
+    "image": "/images/projects/flickers.svg",
+    "link": "https://www.figma.com/proto/id3IOeaBxJUYKfmbb3NHO0/Untitled?page-id=10%3A7023&node-id=11-7207&mode=design&t=Akdp1Jcu4WyJl7Zb-1"
+  },
+
+  {
+    "title": "cinemania_(online_movies)",
+    "category": [
+      {
+        "text": "design",
+        "icon": "fluent:design-ideas-16-regular"
+      },
+      {
+        "text": "coding",
+        "icon": "solar:code-broken"
+      }
+    ],
+    "skills": [
+      {
+        "programingLanguage": "Figma",
+        "programingLanguageIcon": "skill-icons:figma-dark"
+      },
+      {
+        "programingLanguage": "Html",
+        "programingLanguageIcon": "skill-icons:html"
+      },
+      {
+        "programingLanguage": "Css",
+        "programingLanguageIcon": "skill-icons:css"
+      },
+      {
+        "programingLanguage": "JavaScript",
+        "programingLanguageIcon": "vscode-icons:file-type-js-official"
+      }
+    ],
+    "image": "/images/projects/cinemania.svg",
+    "link": "https://cinemania22.netlify.app/"
+  }
+]

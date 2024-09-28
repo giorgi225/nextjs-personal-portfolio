@@ -32,7 +32,7 @@ const ProjectCard = ({ project, index, messages }: Props) => {
 
       <div className="w-full flex flex-col gap-3 pt-2 pb-4 border-b-2 border-dashed border-grayLight2">
         <div className="w-full flex items-center justify-between gap-4">
-          <h2 className="flex font-mainBold text-base sm:text-xl text-black">
+          <h2 className="flex font-mainBold text-base sm:text-2xl text-black">
             {messages[project.title]}
           </h2>
           <div className="flex items-center gap-2">
@@ -51,8 +51,8 @@ const ProjectCard = ({ project, index, messages }: Props) => {
                       : ""
                   } flex items-center gap-[6px] px-4 py-2 rounded`}
                 >
-                  <IconBase icon={categoryItem.icon} />
-                  <p className="hidden md:flex">
+                  <IconBase className="w-5 h-5" icon={categoryItem.icon} />
+                  <p className="hidden font-mainMedium md:flex">
                     {messages[categoryItem.text]}
                   </p>
                 </div>
