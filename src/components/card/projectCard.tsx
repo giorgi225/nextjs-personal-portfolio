@@ -4,6 +4,7 @@ import Image from "next/image";
 import { ProjectType } from "@/types/pages/project.types";
 // Components
 import IconBase from "../icon/IconBase";
+import Loader, { Spinner } from "../loader";
 
 type Props = {
   project: ProjectType;
@@ -18,7 +19,9 @@ const ProjectCard = ({ project, index, messages }: Props) => {
         className={`group relative w-full h-[190px] sm:h-[480px] max-h-[480px] overflow-hidden projects-card rounded-[11px]`}
       >
         <HoverContent project={project} index={index} messages={messages} />
-
+        <div className="absolute top-0 left-0 w-full h-full bg-gray-50 flex items-center justify-center">
+          <Spinner />
+        </div>
         <Image
           className={`rounded-[11px] object-cover group-hover:scale-[1.1] group-hover:blur-sm transition-all duration-500`}
           src={project.image}

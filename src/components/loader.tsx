@@ -5,7 +5,15 @@ const Loader = ({ className }: { className?: string }) => {
         className ? className : ""
       } w-full h-[250px] md:h-[350px] flex items-center justify-center bg-grayLight2 rounded-[11px] overflow-hidden`}
     >
-      <div role="status">
+      <Spinner />
+    </div>
+  );
+};
+export default Loader;
+
+const Spinner = ()=> {
+  return (
+    <div role="status">
         <svg
           aria-hidden="true"
           className="w-[50px] h-[50px] mr-2 text-grayDark animate-spin fill-orange"
@@ -23,7 +31,6 @@ const Loader = ({ className }: { className?: string }) => {
           />
         </svg>
       </div>
-    </div>
-  );
-};
-export default Loader;
+  )
+}
+export { Spinner};
