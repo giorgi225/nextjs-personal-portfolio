@@ -8,11 +8,59 @@ import Layout from "@/components/layout/layout";
 // Styles
 import "@styles/base.css";
 
-export const metadata: Metadata = {
-  title: "Shalamberidze's Portfolio",
-  description: "I am Gigi Shalamberidze, Full-stack developer with more than 4 years experience from Tbilisi, Georgia",
-  keywords: ['developer', 'designer', 'freelancer', 'professional', 'gigi shalamberidze', 'giorgi shalameridze']
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: { locale: string };
+}) {
+  const { locale } = params;
+
+  return {
+    title: "Full-stack Developer | Next.js, React.js, Node.js, Express.js | Gigi Shalamberidze",
+    description:
+      "I'm Full-Stack Developer with 4 years experience in frontend (HTML, CSS, JavaScript, React) and 2 years in backend (Next.js, Express), building dynamic web apps",
+    keywords: [
+      "full-stack developer",
+      "web developer",
+      "frontend developer",
+      "backend developer",
+      "freelance web developer",
+      "professional web designer",
+      "JavaScript developer",
+      "React.js developer",
+      "Next.js expert",
+      "Express.js developer",
+      "Giorgi Shalamberidze",
+      "Gigi Shalamberidze",
+      "dynamic web applications",
+      "high-performance websites",
+    ],
+    openGraph: {
+      url: `${process.env.NEXT_PUBLIC_WEBSITE_URL}/${locale}`,
+      type: "website",
+      title: "Full-stack Developer | Next.js, React.js, Node.js, Express.js | Gigi Shalamberidze",
+      description:
+        "I'm Full-Stack Developer with 4 years experience in frontend (HTML, CSS, JavaScript, React) and 2 years in backend (Next.js, Express), building dynamic web apps",
+      keywords: [
+        "full-stack developer",
+        "web developer",
+        "frontend developer",
+        "backend developer",
+        "freelance web developer",
+        "professional web designer",
+        "JavaScript developer",
+        "React.js developer",
+        "Next.js expert",
+        "Express.js developer",
+        "Giorgi Shalamberidze",
+        "Gigi Shalamberidze",
+        "dynamic web applications",
+        "high-performance websites",
+      ],
+      images: `${process.env.NEXT_PUBLIC_WEBSITE_URL}/profile.png`,
+    },
+  };
+}
 
 export default function RootLayout({
   children,

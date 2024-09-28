@@ -3,7 +3,6 @@ import IconBase from "@/components/icon/IconBase";
 import { Route } from "@/enums/routes.enum";
 import { Link } from "@/navigation";
 import { getMessages } from "next-intl/server";
-import Image from "next/image";
 
 export async function generateMetadata({
   params,
@@ -13,16 +12,24 @@ export async function generateMetadata({
   const { locale } = params;
 
   return {
-    title: "Web Developer & Designer | shalamberidze gigi's portfolio",
+    title: "Full-stack Developer | Next.js, React.js, Node.js, Express.js | Gigi Shalamberidze",
     description:
-      "I am Gigi Shalamberidze, Web Developer & Web Designer with 4 years experience from Tbilisi, Georgia",
+      "I'm Full-Stack Developer with 4 years experience in frontend (HTML, CSS, JavaScript, React) and 2 years in backend (Next.js, Express), building dynamic web apps",
     keywords: [
-      "developer",
-      "designer",
-      "freelancer",
-      "professional",
-      "shalamberidze",
-      "gigi shalameridze",
+      "full-stack developer",
+      "web developer",
+      "frontend developer",
+      "backend developer",
+      "freelance web developer",
+      "professional web designer",
+      "JavaScript developer",
+      "React.js developer",
+      "Next.js expert",
+      "Express.js developer",
+      "Giorgi Shalamberidze",
+      "Gigi Shalamberidze",
+      "dynamic web applications",
+      "high-performance websites",
     ],
     alternates: {
       canonical: `${process.env.NEXT_PUBLIC_WEBSITE_URL}/en`,
@@ -34,9 +41,25 @@ export async function generateMetadata({
     openGraph: {
       url: `${process.env.NEXT_PUBLIC_WEBSITE_URL}/${locale}`,
       type: "website",
-      title: "Web Developer & Designer | shalamberidze gigi's portfolio",
+      title: "Full-stack Developer | Next.js, React.js, Node.js, Express.js | Gigi Shalamberidze",
       description:
-        "I am Gigi Shalamberidze, Web Developer & Web Designer with 4 years experience from Tbilisi, Georgia",
+        "I'm Full-Stack Developer with 4 years experience in frontend (HTML, CSS, JavaScript, React) and 2 years in backend (Next.js, Express), building dynamic web apps",
+      keywords: [
+        "full-stack developer",
+        "web developer",
+        "frontend developer",
+        "backend developer",
+        "freelance web developer",
+        "professional web designer",
+        "JavaScript developer",
+        "React.js developer",
+        "Next.js expert",
+        "Express.js developer",
+        "Giorgi Shalamberidze",
+        "Gigi Shalamberidze",
+        "dynamic web applications",
+        "high-performance websites",
+      ],
       images: `${process.env.NEXT_PUBLIC_WEBSITE_URL}/profile.png`,
     },
   };
@@ -55,7 +78,10 @@ export default async function Home() {
         </div>
         <div className="flex items-center">
           <div className="flex flex-col gap-8 mt-8">
-            <div dangerouslySetInnerHTML={{__html: messages["welcome_text"]}} className="font-mainMedium leading-5 sm:leading-7 text-[13px] sm:text-sm text-slate-900 md:max-w-[800px]"/>
+            <div
+              dangerouslySetInnerHTML={{ __html: messages["welcome_text"] }}
+              className="font-mainMedium leading-5 sm:leading-7 text-[13px] sm:text-sm text-slate-900 md:max-w-[800px]"
+            />
 
             <div className="flex items-center gap-6">
               <div className="flex items-center gap-2">
