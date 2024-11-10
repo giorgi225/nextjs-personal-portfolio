@@ -3,7 +3,9 @@ import ResumeCard from "@/components/ResumeCard";
 import {
   educationData,
   experienceData,
+  personalInfoController,
   projectsData,
+  publicURL,
   skillsData,
 } from "@/controllers/contoller";
 import { ProjectCardType, ResumeCardDataType, SkillType } from "@/types/types";
@@ -19,10 +21,27 @@ import {
   Linkedin01Icon,
   Mail01Icon,
 } from "hugeicons-react";
+import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 
+export const metadata: Metadata = {
+  title: "Full Stack Developer | Next.js, React.js, Node.js, Express.js.",
+  description:
+    "I'm a Full-Stack Developer with four years of frontend and two years of backend expertise, focusing on Html, Css, Javascript, and React.js/Next.js. Over the last two years, I've enhanced my full-stack abilities by creating dynamic and high-performing web applications using technologies like Next.js and Node.js/Express.js.",
+  keywords:
+    "Full-Stack Developer, Gigi Shalamberidze, React.js, Next.js, Node.js, Express.js, Web Developer Georgia, Frontend Developer, Backend Developer, Web Application Developer",
+  openGraph: {
+    url: `${publicURL}`,
+    title: "Full Stack Developer | Next.js, React.js, Node.js, Express.js.",
+    description:
+      "I'm a Full-Stack Developer with four years of frontend and two years of backend expertise, focusing on Html, Css, Javascript, and React.js/Next.js. Over the last two years, I've enhanced my full-stack abilities by creating dynamic and high-performing web applications using technologies like Next.js and Node.js/Express.js.",
+    images: publicURL + "/profile.jpeg",
+  },
+};
+
 export default function Home() {
+  const {linkedinURL, facebookURL, githubURL, phoneURL, emailURL} = personalInfoController
   return (
     <div className="container-main">
       <div className="w-full flex items-center justify-between">
@@ -34,8 +53,8 @@ export default function Home() {
           </p>
         </div>
         <Link
-          href={`https://www.linkedin.com/in/gigi-shalamberidze-b47a27260/`}
-          aria-label="shalamberidze-gigi'ss-linkedin-profile"
+          href={linkedinURL}
+          aria-label="shalamberidze-gigi's-linkedin-profile"
         >
           <Image
             src={`/profile.jpeg`}
@@ -52,21 +71,21 @@ export default function Home() {
         <div className="w-full h-full flex items-center justify-between">
           <div className="flex items-center space-x-2">
             <Link
-              href={`https://www.facebook.com/profile.php?id=100092546885517`}
+              href={facebookURL}
               target="_blank"
               className="w-8 h-8 flex items-center justify-center text-foreground/90 duration-300 transition-all"
             >
               <Facebook01Icon strokeWidth={1.5} className="w-5 h-5" />
             </Link>
             <Link
-              href={`https://github.com/giorgi225`}
+              href={githubURL}
               target="_blank"
               className="w-8 h-8 flex items-center justify-center text-foreground/90 duration-300 transition-all"
             >
               <Github01Icon strokeWidth={1.5} className="w-5 h-5" />
             </Link>
             <Link
-              href={`https://www.linkedin.com/in/gigi-shalamberidze-b47a27260/`}
+              href={linkedinURL}
               target="_blank"
               className="w-8 h-8 flex items-center justify-center text-foreground/90 duration-300 transition-all"
             >
@@ -75,22 +94,18 @@ export default function Home() {
           </div>
           <div className="flex items-center space-x-6">
             <Link
-              href={`tel:+995574175188`}
+              href={phoneURL}
               className="flex items-center space-x-2 text-foreground/90 hover:underline transition-all"
             >
               <Call02Icon strokeWidth={1.5} className="w-5 h-5" />
-              <p>
-                Call Me
-              </p>
+              <p>Call Me</p>
             </Link>
             <Link
-              href={`mailto:gigi.shalamberidze2020@gmail.com`}
+              href={emailURL}
               className="flex items-center space-x-2 text-foreground/90 hover:underline transition-all"
             >
               <Mail01Icon strokeWidth={1.5} className="w-5 h-5" />
-              <p>
-                Send mail
-              </p>
+              <p>Send mail</p>
             </Link>
           </div>
         </div>
@@ -122,7 +137,7 @@ export default function Home() {
         </div>
       </section>
       <section id="skills">
-        <h2 >Skills</h2>
+        <h2>Skills</h2>
         {skillsData.map((data: SkillType, index: number) => (
           <div key={index} className="mt-2 sm:mt-4 flex flex-col space-y-4">
             <div className="flex flex-col space-y-2">
@@ -143,8 +158,11 @@ export default function Home() {
       </section>
       <section id="Projects" className="mt-12">
         <h2 className="text-4xl font-bold text-center">My Works</h2>
-        <p className="w-full max-w-xl text-center mx-auto mt-2 leading-5 text-foreground/80">I've worked on a variety of projects, from simple websites to complex web applications. Here are a few of my favorites.</p>
-        {projectsData.map((data: ProjectCardType, index: number)=> (
+        <p className="w-full max-w-xl text-center mx-auto mt-2 leading-5 text-foreground/80">
+          I've worked on a variety of projects, from simple websites to complex
+          web applications. Here are a few of my favorites.
+        </p>
+        {projectsData.map((data: ProjectCardType, index: number) => (
           <ProjectCard {...data} />
         ))}
       </section>

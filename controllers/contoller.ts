@@ -65,75 +65,71 @@ const educationData: ResumeCardDataType[] = [
 ];
 
 const skillsData: SkillType[] = [
-    {
-      skill: "Frontend",
-      skills: [
-        "HTML",
-        "CSS",
-        "TailwindCSS",
-        "JavaScript",
-        "TypeScript",
-        "React.js",
-        "Next.js",
-      ],
-    },
-    {
-      skill: "Backend",
-      skills: [
-        "Node.js",
-        "Express.js",
-        "Next.js",
-        "MySQL",
-        "MongoDB",
-        "Prisma",
-      ],
-    },
-    {
-      skill: "General",
-      skills: [
-        "REST APIs",
-        "GraphQL",
-        "Responsive Design",
-        "UI/UX Principles",
-      ],
-    },
-  ];
+  {
+    skill: "Frontend",
+    skills: [
+      "HTML",
+      "CSS",
+      "TailwindCSS",
+      "JavaScript",
+      "TypeScript",
+      "React.js",
+      "Next.js",
+    ],
+  },
+  {
+    skill: "Backend",
+    skills: ["Node.js", "Express.js", "Next.js", "MySQL", "MongoDB", "Prisma"],
+  },
+  {
+    skill: "General",
+    skills: ["REST APIs", "GraphQL", "Responsive Design", "UI/UX Principles"],
+  },
+];
 
+const projectsData: ProjectCardType[] = [
+  {
+    title: "Tours Website",
+    src: "/projects/vitistravel.webp",
+    alt: "vitistravel",
+    href: "https://vitistravel.com",
+    linkText: "vitistravel.com",
+    skills: ["Next.js", "Express.js", "TailwindCss", "MySQL", "Prisma"],
+  },
+  {
+    title: "Tours Website",
+    src: "/projects/imperialtours.svg",
+    alt: "imperialtours",
+    href: "https://imperialtours.ge",
+    linkText: "imperialtours.ge",
+    skills: ["Next.js", "Express.js", "TailwindCss", "MySQL", "Prisma"],
+  },
+  {
+    title: "Repair Company",
+    src: "/projects/metrix.svg",
+    alt: "metrix",
+    href: "https://metrix.ge",
+    linkText: "metrix.ge",
+    skills: ["Next.js", "TailwindCss", "RestAPI"],
+  },
+  {
+    title: "Service based Company",
+    src: "/projects/serwish.svg",
+    alt: "serwish",
+    href: "https://serwish.ge",
+    linkText: "serwish.ge",
+    skills: ["react.js", "Laravel", "TailwindCss", "RestAPI"],
+  },
+];
 
-  const projectsData: ProjectCardType[] = [
-    {
-      title: "Tours Website",
-      src: "/projects/vitistravel.webp",
-      alt: "vitistravel",
-      href: "https://vitistravel.com",
-      linkText: "vitistravel.com",
-      skills: ["Next.js", "Express.js", "TailwindCss", "MySQL", "Prisma"],
-    },
-    {
-      title: "Tours Website",
-      src: "/projects/imperialtours.svg",
-      alt: "imperialtours",
-      href: "https://imperialtours.ge",
-      linkText: "imperialtours.ge",
-      skills: ["Next.js", "Express.js", "TailwindCss", "MySQL", "Prisma"],
-    },
-    {
-      title: "Repair Company",
-      src: "/projects/metrix.svg",
-      alt: "metrix",
-      href: "https://metrix.ge",
-      linkText: "metrix.ge",
-      skills: ["Next.js", "TailwindCss", "RestAPI"],
-    },
-    {
-      title: "Service based Company",
-      src: "/projects/serwish.svg",
-      alt: "serwish",
-      href: "https://serwish.ge",
-      linkText: "serwish.ge",
-      skills: ["react.js", "Laravel", "TailwindCss", "RestAPI"],
-    },
-  ]
-  
+const publicURL: string = "https://shalamberidze-giorgi.vercel.app";
 
-export { experienceData, educationData, skillsData, projectsData };
+const personalInfoController = {
+  linkedinURL: "https://www.linkedin.com/in/gigi-shalamberidze-b47a27260/",
+  facebookURL: "https://www.facebook.com/profile.php?id=100092546885517",
+  githubURL: "https://github.com/giorgi225",
+  phoneURL: "tel:+995574175188",
+  emailURL: "mailto:gigi.shalamberidze2022@gmail.com"
+};
+
+export { experienceData, educationData, skillsData, projectsData, publicURL, personalInfoController };
