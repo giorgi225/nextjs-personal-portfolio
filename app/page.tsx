@@ -1,101 +1,153 @@
+import ProjectCard from "@/components/ProjectCard";
+import ResumeCard from "@/components/ResumeCard";
+import {
+  educationData,
+  experienceData,
+  projectsData,
+  skillsData,
+} from "@/controllers/contoller";
+import { ProjectCardType, ResumeCardDataType, SkillType } from "@/types/types";
+import {
+  Call02Icon,
+  CallAdd02Icon,
+  CallIcon,
+  CallInternalIcon,
+  CallRinging01Icon,
+  DribbbleIcon,
+  Facebook01Icon,
+  Github01Icon,
+  Linkedin01Icon,
+  Mail01Icon,
+} from "hugeicons-react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div className="container-main">
+      <div className="w-full flex items-center justify-between">
+        <div className="flex flex-col sm:space-y-1">
+          <h1>Gigi Shalamberidze</h1>
+          <p className="text-sm">
+            <strong>Full Stack Developer</strong> | Next.js, React.js, Node.js,
+            Express.js.
+          </p>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
+        <Link
+          href={`https://www.linkedin.com/in/gigi-shalamberidze-b47a27260/`}
+          aria-label="shalamberidze-gigi'ss-linkedin-profile"
         >
           <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
+            src={`/profile.jpeg`}
+            alt="profile-img"
+            width={120}
+            height={120}
+            quality={100}
+            priority
+            className="min-w-16 min-h-16 w-16 h-16  rounded-full"
           />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+        </Link>
+      </div>
+      <div className="border-y border-neutral h-12 sm:h-14">
+        <div className="w-full h-full flex items-center justify-between">
+          <div className="flex items-center space-x-2">
+            <Link
+              href={`https://www.facebook.com/profile.php?id=100092546885517`}
+              target="_blank"
+              className="w-8 h-8 flex items-center justify-center text-foreground/90 duration-300 transition-all"
+            >
+              <Facebook01Icon strokeWidth={1.5} className="w-5 h-5" />
+            </Link>
+            <Link
+              href={`https://github.com/giorgi225`}
+              target="_blank"
+              className="w-8 h-8 flex items-center justify-center text-foreground/90 duration-300 transition-all"
+            >
+              <Github01Icon strokeWidth={1.5} className="w-5 h-5" />
+            </Link>
+            <Link
+              href={`https://www.linkedin.com/in/gigi-shalamberidze-b47a27260/`}
+              target="_blank"
+              className="w-8 h-8 flex items-center justify-center text-foreground/90 duration-300 transition-all"
+            >
+              <Linkedin01Icon strokeWidth={1.5} className="w-5 h-5" />
+            </Link>
+          </div>
+          <div className="flex items-center space-x-6">
+            <Link
+              href={`tel:+995574175188`}
+              className="flex items-center space-x-2 text-foreground/90 hover:underline transition-all"
+            >
+              <Call02Icon strokeWidth={1.5} className="w-5 h-5" />
+              <p>
+                Call Me
+              </p>
+            </Link>
+            <Link
+              href={`mailto:gigi.shalamberidze2020@gmail.com`}
+              className="flex items-center space-x-2 text-foreground/90 hover:underline transition-all"
+            >
+              <Mail01Icon strokeWidth={1.5} className="w-5 h-5" />
+              <p>
+                Send mail
+              </p>
+            </Link>
+          </div>
+        </div>
+      </div>
+      <section id="about-me">
+        <h2>About</h2>
+        <p className=" hyphens-auto">
+          I'm a Full-Stack Developer with four years of frontend and two years
+          of backend expertise, focusing on Html, Css, Javascript, and
+          React.js/Next.js. Over the last two years, I've enhanced my full-stack
+          abilities by creating dynamic and high-performing web applications
+          using technologies like Next.js and Node.js/Express.js.
+        </p>
+      </section>
+      <section id="experience">
+        <h2>Experience</h2>
+        <div className="space-y-3">
+          {experienceData.map((data: ResumeCardDataType, index: number) => (
+            <ResumeCard key={index} {...data} />
+          ))}
+        </div>
+      </section>
+      <section id="education">
+        <h2>Education</h2>
+        <div className="space-y-2 divide-y divide-neutral">
+          {educationData.map((data: ResumeCardDataType, index: number) => (
+            <ResumeCard key={index} {...data} />
+          ))}
+        </div>
+      </section>
+      <section id="skills">
+        <h2 >Skills</h2>
+        {skillsData.map((data: SkillType, index: number) => (
+          <div key={index} className="mt-2 sm:mt-4 flex flex-col space-y-4">
+            <div className="flex flex-col space-y-2">
+              <h3>{data.skill}</h3>
+              <div className="flex items-center gap-2 flex-wrap">
+                {data.skills.map((skill, skillIndex) => (
+                  <div
+                    key={skillIndex}
+                    className="bg-neutral text-xs font-medium px-3 tracking-wide py-2 rounded-lg border border-transparent min-w-max hover:bg-transparent text-foreground hover:border-foreground cursor-default transition-all ease-linear"
+                  >
+                    {skill}
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        ))}
+      </section>
+      <section id="Projects" className="mt-12">
+        <h2 className="text-4xl font-bold text-center">My Works</h2>
+        <p className="w-full max-w-xl text-center mx-auto mt-2 leading-5 text-foreground/80">I've worked on a variety of projects, from simple websites to complex web applications. Here are a few of my favorites.</p>
+        {projectsData.map((data: ProjectCardType, index: number)=> (
+          <ProjectCard {...data} />
+        ))}
+      </section>
     </div>
   );
 }

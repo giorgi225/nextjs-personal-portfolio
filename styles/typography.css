@@ -1,0 +1,19 @@
+h1 {
+    @apply scroll-m-20 text-2xl sm:text-4xl font-primary font-black tracking-tight;
+}
+
+h2 {
+    @apply scroll-m-20 text-xl font-primary font-bold tracking-tight first:mt-0;
+}
+
+h3 {
+    @apply scroll-m-20 text-sm font-secondary font-medium;
+}
+
+p {
+    @apply text-[13px] font-medium leading-6 text-foreground/80;
+}
+
+strong {
+    @apply font-medium;
+}

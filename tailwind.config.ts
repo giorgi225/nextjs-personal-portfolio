@@ -9,8 +9,13 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        background: "rgb(var(--background))",
+        foreground: "rgb(var(--foreground))",
+        neutral: "rgb(var(--neutral))",
+      },
+      fontFamily: {
+        primary:   ['var(--font-montserrat)'], // for titles
+        secondary: ['var(--font-poppins)'], // for descriptions, buttons...
       },
     },
   },

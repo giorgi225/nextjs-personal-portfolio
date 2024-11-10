@@ -1,0 +1,10 @@
+@import url("./tailwind.css");
+@import url("./typography.css");
+
+body {
+  @apply bg-background text-foreground font-secondary text-base p-3 sm:p-6;
+}
+
+.container-main {
+  @apply flex flex-col gap-6 w-full max-w-2xl mx-auto py-2;
+}
