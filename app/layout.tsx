@@ -5,6 +5,8 @@ import { Inter, Montserrat, Poppins } from "next/font/google";
 // Styles
 import "@/styles/base.css";
 
+import { Analytics } from "@vercel/analytics/react"
+
 const montserrat = Montserrat({
   subsets: ["latin"],
   display: "swap",
@@ -30,6 +32,7 @@ export default function RootLayout({ children }: Props) {
         className={`${montserrat.variable} ${poppins.variable} antialiased`}
       >
         {children}
+        <Analytics />
       </body>
     </html>
   );
