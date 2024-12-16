@@ -40,8 +40,9 @@ export const metadata: Metadata = {
   },
 };
 
-export default function Home() {
-  const {linkedinURL, facebookURL, githubURL, phoneURL, emailURL} = personalInfoController
+export default async function Home() {
+  const { linkedinURL, facebookURL, githubURL, phoneURL, emailURL } =
+    personalInfoController;
   return (
     <div className="container-main">
       <div className="w-full flex items-center justify-between">
