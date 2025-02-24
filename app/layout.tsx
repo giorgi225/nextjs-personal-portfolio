@@ -1,12 +1,11 @@
 // Next
 import type { ReactNode } from "react";
-import { Inter, Montserrat, Poppins } from "next/font/google";
+import { Inter, Montserrat } from "next/font/google";
 
 // Styles
 import "@/styles/base.css";
 
-import { Analytics } from "@vercel/analytics/react"
-
+// Fonts
 const montserrat = Montserrat({
   subsets: ["latin"],
   display: "swap",
@@ -21,6 +20,7 @@ const poppins = Inter({
   variable: "--font-poppins",
 });
 
+// types
 type Props = {
   children: ReactNode;
 };
@@ -32,7 +32,6 @@ export default function RootLayout({ children }: Props) {
         className={`${montserrat.variable} ${poppins.variable} antialiased`}
       >
         {children}
-        <Analytics />
       </body>
     </html>
   );

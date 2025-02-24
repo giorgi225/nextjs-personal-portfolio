@@ -26,16 +26,16 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Full Stack Developer | Next.js, React.js, Node.js, Express.js.",
+  title: "React.js Developer | Next.js, React.js, Node.js, Express.js.",
   description:
-    "I'm a Full-Stack Developer with four years of frontend and two years of backend expertise, focusing on Html, Css, Javascript, and React.js/Next.js. Over the last two years, I've enhanced my full-stack abilities by creating dynamic and high-performing web applications using technologies like Next.js and Node.js/Express.js.",
+    "I'm a React Developer with four years of frontend and two years of backend expertise, focusing on Html, Css, Javascript, and React.js/Next.js. Over the last two years, I've enhanced my React abilities by creating dynamic and high-performing web applications using technologies like Next.js and Node.js/Express.js.",
   keywords:
-    "Full-Stack Developer, Gigi Shalamberidze, React.js, Next.js, Node.js, Express.js, Web Developer Georgia, Frontend Developer, Backend Developer, Web Application Developer",
+    "React Developer, Gigi Shalamberidze, React.js, Next.js, Node.js, Express.js, Web Developer Georgia, Frontend Developer, Backend Developer, Web Application Developer",
   openGraph: {
     url: `${publicURL}`,
-    title: "Full Stack Developer | Next.js, React.js, Node.js, Express.js.",
+    title: "React.js Developer | Next.js, React.js, Node.js, Express.js.",
     description:
-      "I'm a Full-Stack Developer with four years of frontend and two years of backend expertise, focusing on Html, Css, Javascript, and React.js/Next.js. Over the last two years, I've enhanced my full-stack abilities by creating dynamic and high-performing web applications using technologies like Next.js and Node.js/Express.js.",
+      "I'm a React Developer with four years of frontend and two years of backend expertise, focusing on Html, Css, Javascript, and React.js/Next.js. Over the last two years, I've enhanced my React abilities by creating dynamic and high-performing web applications using technologies like Next.js and Node.js/Express.js.",
     images: publicURL + "/profile.jpeg",
   },
 };
@@ -48,8 +48,8 @@ export default async function Home() {
       <div className="w-full flex items-center justify-between">
         <div className="flex flex-col sm:space-y-1">
           <h1>Gigi Shalamberidze</h1>
-          <p className="text-sm">
-            <strong>Full Stack Developer</strong> | Next.js, React.js, Node.js,
+          <p className="text-sm md:text-base">
+            <strong>React.js Developer</strong> | Next.js, React.js, Node.js,
             Express.js.
           </p>
         </div>
@@ -114,9 +114,9 @@ export default async function Home() {
       <section id="about-me">
         <h2>About</h2>
         <p className=" hyphens-auto">
-          I'm a Full-Stack Developer with four years of frontend and two years
+          I'm a React Developer with four years of frontend and two years
           of backend expertise, focusing on Html, Css, Javascript, and
-          React.js/Next.js. Over the last two years, I've enhanced my full-stack
+          React.js/Next.js. Over the last two years, I've enhanced my React
           abilities by creating dynamic and high-performing web applications
           using technologies like Next.js and Node.js/Express.js.
         </p>
@@ -158,13 +158,13 @@ export default async function Home() {
         ))}
       </section>
       <section id="Projects" className="mt-12">
-        <h2 className="text-4xl font-bold text-center">My Works</h2>
+        <h2 className="text-4xl font-bold text-center">My Latest Works</h2>
         <p className="w-full max-w-xl text-center mx-auto mt-2 leading-5 text-foreground/80">
           I've worked on a variety of projects, from simple websites to complex
           web applications. Here are a few of my favorites.
         </p>
         {projectsData.map((data: ProjectCardType, index: number) => (
-          <ProjectCard {...data} />
+          <ProjectCard key={index} {...data} />
         ))}
       </section>
     </div>
