@@ -22,3 +22,11 @@ export type ProjectCardType = {
   src: string;
   alt: string;
 };
+
+export type BlogCardType = {
+  title: string;
+  description: string;
+  href: string;
+  src: string;
+  alt: string;
+}

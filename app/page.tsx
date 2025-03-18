@@ -1,6 +1,8 @@
+import BlogCard from "@/components/BlogCard";
 import ProjectCard from "@/components/ProjectCard";
 import ResumeCard from "@/components/ResumeCard";
 import {
+  blogsData,
   educationData,
   experienceData,
   personalInfoController,
@@ -8,7 +10,12 @@ import {
   publicURL,
   skillsData,
 } from "@/controllers/contoller";
-import { ProjectCardType, ResumeCardDataType, SkillType } from "@/types/types";
+import {
+  BlogCardType,
+  ProjectCardType,
+  ResumeCardDataType,
+  SkillType,
+} from "@/types/types";
 import {
   Call02Icon,
   CallAdd02Icon,
@@ -114,8 +121,8 @@ export default async function Home() {
       <section id="about-me">
         <h2>About</h2>
         <p className=" hyphens-auto">
-          I'm a React Developer with four years of frontend and two years
-          of backend expertise, focusing on Html, Css, Javascript, and
+          I'm a React Developer with four years of frontend and two years of
+          backend expertise, focusing on Html, Css, Javascript, and
           React.js/Next.js. Over the last two years, I've enhanced my React
           abilities by creating dynamic and high-performing web applications
           using technologies like Next.js and Node.js/Express.js.
@@ -166,6 +173,18 @@ export default async function Home() {
         {projectsData.map((data: ProjectCardType, index: number) => (
           <ProjectCard key={index} {...data} />
         ))}
+      </section>
+      <section id="my-blogs" className="mt-12">
+        <h2 className="text-4xl font-bold text-center">My Blogs</h2>
+        <p className="w-full max-w-xl text-center mx-auto mt-2 leading-5 text-foreground/80">
+          I share valuable tips and insights on various topics. Check out my
+          latest blog.
+        </p>
+        <div className="w-full grid co space-y-4 mt-2 sm:mt-8">
+          {blogsData.map((data: BlogCardType, index: number) => (
+            <BlogCard key={index} {...data} />
+          ))}
+        </div>
       </section>
     </div>
   );

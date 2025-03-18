@@ -1,4 +1,4 @@
-import { ProjectCardType, ResumeCardDataType, SkillType } from "@/types/types";
+import { BlogCardType, ProjectCardType, ResumeCardDataType, SkillType } from "@/types/types";
 
 const experienceData: ResumeCardDataType[] = [
   {
@@ -122,6 +122,17 @@ const projectsData: ProjectCardType[] = [
   },
 ];
 
+const blogsData: BlogCardType[] = [
+  {
+    title: "Implementing Secure Authentication & Authorization in Express.js with JWT, TypeScript, and Prisma.",
+    description: "Learn how to implement secure authentication and authorization in an Express.js API using JWT, TypeScript, and Prisma. This guide walks you through setting up access & refresh tokens, securing endpoints, and structuring a scalable project with controllers, middlewares, and validations. Perfect for building authentication in real-world apps!",
+    href: "https://medium.com/@gigi.shalamberidze2022/implementing-secure-authentication-authorization-in-express-js-with-jwt-typescript-and-prisma-087c90596889",
+    alt: "express-jwt-auth-wallpaper",
+    src: "/express-auth-blog.jpeg"
+  }
+]
+
+
 const publicURL: string = "https://shalamberidze-giorgi.vercel.app";
 
 const personalInfoController = {
@@ -132,4 +143,4 @@ const personalInfoController = {
   emailURL: "mailto:gigi.shalamberidze2022@gmail.com"
 };
 
-export { experienceData, educationData, skillsData, projectsData, publicURL, personalInfoController };
+export { experienceData, educationData, skillsData, projectsData, blogsData, publicURL, personalInfoController };

@@ -36,7 +36,7 @@ const ProjectCard = ({
           </span>
           <div className="flex items-center gap-x-2 gap-y-0 font-medium flex-wrap text-font-main">
             {skills.map((skill: string, index: number) => (
-              <span className="">
+              <span key={index} className="">
                 {skill}{index !== skills.length - 1 ? "," : "."}
               </span>
             ))}
